@@ -4,172 +4,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Management App</title>
+    <!-- Link to External CSS -->
     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-            <div class="nav-left">
-                <img src="your-logo-path.png" alt="TaskManager Logo" class="logo">
-            </div>
-            <div class="nav-center">
-                <a href="#">Home</a>
-                <a href="#">Features</a>
-            </div>
-            <div class="nav-right">
-                <a href="#">Login</a>
-                <a href="#">Sign Up</a>
-            </div>
-    </nav>
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="../Assets/Logo (1).png" alt="TaskManager Logo" class="logo">
+    </div>
+    <div class="nav-center" id="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Task</a>
+        <a href="#">Create Task</a>
+        <a href="#">About us</a>
+        <a href="#">Contact us</a>
+    </div>
+    <div class="nav-right">
+        <a href="#" class="cta-btn">Get Started</a>
+    </div>
+    <div class="hamburger" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="overlay">
-            <video autoplay muted loop class="hero-video">
-                <source src="../Assets/AdobeStock_508396632.mp4" type="video/mp4"> 
-                <source src="../Assets/AdobeStock_508396632.mp4.webm" type="video/webm"> 
-                Your browser does not support the video tag.
-            </video>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <p>Welcome to TaskManager</p>
+        <h1>We solve business problems with technology.</h1>
+        <p>Our performance is your success. Our passion iheros innovation. Our expertise is unmatched. We get you more.</p>
+        <div class="hero-buttons">
+            <a href="#" class="btn-primary">Create a Task</a>
+            <a href="#" class="btn-secondary">View Your task</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="../Assets/Asset 1.png" alt="Task Manager Illustration">
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="services">
+        <div class="service-card">
+            <img src="../Assets/task.png" alt="Software Services">
+            <h3>Streamlined Task Creation</h3>
+            <p>Our platform allows you to create tasks easily, assign them to team members, and set deadlines efficiently.</p>
+            <a href="#" class="learn-more">Learn more</a>
+        </div>
+        <div class="service-card">
+            <img src="../Assets/Collaboration.png" alt="Cloud Services">
+            <h3>Real-Time Collaboration</h3>
+            <p>Collaborate with your team in real-time, ensuring seamless updates and transparent communication..</p>
+            <a href="#" class="learn-more">Learn more</a>
+        </div>
+        <div class="service-card">
+            <img src="../Assets/management.png" alt="Security Services">
+            <h3>Comprehensive Task Management</h3>
+            <p>Manage tasks, track progress, and stay on top of your project goals with our all-in-one task management tool.</p>
+            <a href="#" class="learn-more">Learn more</a>
+        </div>
+    </div>
+
+    <div class="happy-customers">
+        <h1>Join our <span id="customer-count">0</span> happy customers with your task today</h1>
+    </div>
+</section>
+
+<section class="why-us-section">
+    <div class="why-us-container">
+        <div class="why-us-image">
+            <img src="../Assets/whyus1.png" alt="Why Us Image">
+        </div>
+        <div class="why-us-content">
+            <h2>Why Choose Us</h2>
+            <p>We provide expert task management solutions with features designed to help you succeed. Here’s why our platform stands out:</p>
+            <ul>
+                <li>✔ Comprehensive Task Management</li>
+                <li>✔ Real-time Collaboration</li>
+                <li>✔ Easy Task Assignment and Progress Tracking</li>
+                <li>✔ Intuitive and User-Friendly Interface</li>
+                <li>✔ Secure and Reliable Data Handling</li>
+                <li>✔ 24/7 Support and Assistance</li>
+            </ul>
+            <a href="#" class="read-more-btn">Read More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Section -->
+<section class="testimonial-section">
+    <div class="testimonial-container">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-content">
+            <button class="testimonial-arrow left-arrow" id="left-arrow">&#8249;</button>
             
-            <div class="hero-info">
-                <h1>Welcome to TaskManager</h1>
-                <p>Your simple and effective way to manage tasks</p>
-                <a href="#" class="cta-btn">Get Started</a>
+            <!-- Testimonial Cards Wrapper -->
+            <div class="testimonial-cards-wrapper">
+                <div class="testimonial-card active">
+                    <p class="testimonial-text">"We had a great time using TaskManager. The task organization was seamless, and the real-time collaboration feature made our work much easier. We recommend it."</p>
+                    <div class="testimonial-stars">
+                        &#9733;&#9733;&#9733;&#9733;&#9734;
+                    </div>
+                    <p class="testimonial-author">John Doe - Cape Town</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"TaskManager has completely transformed how we handle our projects. The ease of use and integration into our workflow has saved us hours of time every week!"</p>
+                    <div class="testimonial-stars">
+                        &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                    <p class="testimonial-author">Jane Smith - Johannesburg</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The best task management platform we’ve ever used! Simple, intuitive, and effective. Highly recommend TaskManager to all growing teams.Its a live saver"</p>
+                    <div class="testimonial-stars">
+                        &#9733;&#9733;&#9733;&#9733;&#9733;
+                    </div>
+                    <p class="testimonial-author">Mike Brown - Durban</p>
+                </div>
+            </div>
+
+            <button class="testimonial-arrow right-arrow" id="right-arrow">&#8250;</button>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="../Assets/Logo (1).png" alt="TaskManager Logo">
+        </div>
+
+        <div class="footer-menu">
+            <h3>Quick Menu</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Task</a></li>
+                <li><a href="#">Create Task</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>+27 98 678 463</p>
+            <p>info@TaskXpert.co.za</p>
+            <div class="social-icons">
+                <a href="#"><img src="../Assets/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="../Assets/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../Assets/twitter.png" alt="Twitter"></a>
             </div>
         </div>
     </div>
 
-    <!-- Introduction Section -->
-    <section class="intro-section">
-        <div class="container">
-            <h2>Why TaskManager?</h2>
-            <p>TaskManager is designed to help you and your team stay organized. Whether you’re working solo or collaborating with others, TaskManager gives you the tools to track tasks, set deadlines, and achieve your goals. It's fast, simple, and best of all, free.</p>
-        </div>
-    </section>
+    <div class="footer-bottom">
+        <p>&copy; 2024 TaskXpert, Inc. All Rights Reserved.</p>
+    </div>
+</footer>
 
-    <div class="accordion-text"><h1>QUICK ANSWERS</h1></div>
-    <!-- Features Section -->
-    <section class="accordion-section">
-        
-        <!-- Accordion Item 1 -->
-        <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion('panel1', this)">Booking Process
-                <span class="arrow">&#9662;</span>
-            </button>
-            <div id="panel1" class="accordion-panel">
-                <p>The cruise booking process involves searching for available cruises based on your preferences. Once you make the payment, you'll receive a booking confirmation with all the details. Before the cruise, you'll complete pre-cruise planning tasks and collect necessary documents for embarkation.</p>
-            </div>
-        </div>
 
-        <!-- Accordion Item 2 -->
-        <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion('panel2', this)">Cancellation and Refund Policies
-                <span class="arrow">&#9662;</span>
-            </button>
-            <div id="panel2" class="accordion-panel">
-                <p>Details about cancellation and refund policies go here...</p>
-            </div>
-        </div>
 
-        <!-- Accordion Item 3 -->
-        <div class="accordion-item">
-            <button class="accordion-header" onclick="toggleAccordion('panel3', this)">Travel Documentation
-                <span class="arrow">&#9662;</span>
-            </button>
-            <div id="panel3" class="accordion-panel">
-                <p>Information about travel documentation goes here...</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <h2>What Our Users Say</h2>
-        <div class="testimonials">
-            <div class="testimonial">
-                <p>"TaskManager has transformed how I organize my work. It's simple, easy to use, and incredibly efficient!"</p>
-                <span>- John Doe</span>
-            </div>
-            <div class="testimonial">
-                <p>"My team loves using TaskManager! We can collaborate seamlessly and stay on top of our tasks."</p>
-                <span>- Jane Smith</span>
-            </div>
-            <div class="testimonial">
-                <p>"My team loves using TaskManager! We can collaborate seamlessly and stay on top of our tasks."</p>
-                <span>- Jane Smith</span>
-            </div>
-            <div class="testimonial">
-                <p>"My team loves using TaskManager! We can collaborate seamlessly and stay on top of our tasks."</p>
-                <span>- Jane Smith</span>
-            </div>
-        </div>
-    </section>
+<script>
+    document.getElementById('hamburger-menu').addEventListener('click', function() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('open');
+    });
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="your-logo-path.png" alt="TaskManager Logo">
-                <h2>Task Manager</h2>
-                <p>Your perfect task manager solution.</p>
-            </div>
-
-            <div class="footer-menu">
-                <h3>Quick Menu</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Login</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p>+27 98 678 483</p>
-                <p><a href="mailto:info@taskmanager.co.za">info@taskmanager.co.za</a></p>
-                <div class="social-icons">
-                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 TaskManager, Inc. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleAccordion(panelId, element) {
-        const panel = document.getElementById(panelId);
-        
-        // Toggle the display of the panel
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-            element.classList.remove('active'); 
-        } else {
-            panel.style.display = "block";
-            element.classList.add('active');
-        }
+    function animateValue(id, start, end, duration) {
+        let obj = document.getElementById(id);
+        let range = end - start;
+        let current = start;
+        let increment = end > start ? 1 : -1;
+        let stepTime = Math.abs(Math.floor(duration / range)); // Speed up animation by reducing duration
+        let timer = setInterval(function () {
+            current += increment;
+            obj.textContent = current.toLocaleString();
+            if (current == end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
     }
 
+    // Start the animation when the section is in view
     document.addEventListener("DOMContentLoaded", function() {
-        const introSection = document.querySelector(".intro-section");
+        const customerSection = document.querySelector(".happy-customers");
 
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    introSection.classList.add("visible");
-                    observer.unobserve(introSection); // Stops observing once the animation is triggered
+                    animateValue("customer-count", 0, 10000, 1000); // Increase to 30,000 in 1 second
+                    observer.unobserve(customerSection);
                 }
             });
         });
 
-        observer.observe(introSection);
+        observer.observe(customerSection);
     });
-    </script>
+    const cards = document.querySelectorAll('.testimonial-card');
+    const leftArrow = document.getElementById('left-arrow');
+    const rightArrow = document.getElementById('right-arrow');
+    let currentIndex = 0;
+
+    // Function to show the current testimonial card
+    function showCard(index) {
+        cards.forEach((card, i) => {
+            card.classList.remove('active');
+            if (i === index) {
+                card.classList.add('active');
+            }
+        });
+    }
+
+    // Event listeners for arrows
+    leftArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? cards.length - 1 : currentIndex - 1;
+        showCard(currentIndex);
+    });
+
+    rightArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex === cards.length - 1) ? 0 : currentIndex + 1;
+        showCard(currentIndex);
+    });
+
+    // Initialize the first testimonial card
+    showCard(currentIndex);
+</script>
 
 </body>
 </html>
