@@ -1,0 +1,149 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Signup Page Layout */
+.signup-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Left Section with Form */
+.signup-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+    background-color: #ffffff;
+}
+
+.form-header img {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 350px;
+}
+
+.form-header p {
+
+    font-weight: bolder;
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.signup-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #d9ff00; /* Yellow highlight on focus */
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: #00403D; /* Dark green button color */
+    color: #b3cfcd; /* Light green text */
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #b3cfcd;
+    color: #00403D; /* Reverse colors on hover */
+}
+
+.signin-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signin-link a {
+    color: #00403D; /* Dark green */
+    text-decoration: none;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+/* Right Section with Image (swapped to the right) */
+.signup-right {
+    flex: 1;
+    background-image: url("../Assets/Background.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-right img {
+    width: 65%;
+    max-width: 900px;
+    height: auto;
+    animation: floatUpDown 6s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .signup-container {
+        flex-direction: column;
+    }
+
+    .signup-right {
+        display: none;
+    }
+
+    .signup-left {
+        padding: 0 20px;
+    }
+}

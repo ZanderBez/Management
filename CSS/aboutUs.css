@@ -1,0 +1,287 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: 'Arial', sans-serif;
+    background-color: transparent;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+    background-color: #00403D;
+    color: white;
+    z-index: 10;
+}
+
+.nav-left .logo {
+    max-width: 200px;
+    width: 100px;
+    height: auto;
+}
+
+.nav-center {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-center a {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+    color: #d9ff00;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.logout-btn {
+    background-color: #d9ff00;
+    color: #00403D;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #b3cfcd;
+    color: #00403D;
+}
+
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+    background-image: url("../Assets/Background.png");
+}
+
+.about-text h2 {
+    margin-left: 15px;
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.about-text p {
+    margin-left: 15px;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.stat-card {
+    text-align: center;
+}
+
+.stat-card h3 {
+    font-size: 32px;
+    color: #00403D;
+}
+
+.stat-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Our Story Section */
+.our-story {
+    padding: 100px 300px;
+    background-color: #f9f9f9; /* Light background */
+}
+
+.our-story-container {
+    display: flex; /* Flexbox for layout */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.our-story-title {
+    flex: 1; /* Take up space on the left */
+    position: relative; /* For line positioning */
+}
+
+.our-story-title h2 {
+    font-size: 36px;
+    color: #00403D; /* Dark green */
+    margin-bottom: 10px;
+}s
+
+.our-story-title h2::before {
+    content: ""; 
+    position: absolute;
+    left: -20px; /* Adjust position as needed */
+    top: 50%; /* Center vertically */
+    height: 40%; /* Line height */
+    width: 5px; /* Line thickness */
+    background-color: #00403D; /* Line color */
+    transform: translateY(-50%); /* Center the line */
+}
+
+.our-story-content {
+    flex: 2; /* Take up space on the right */
+    padding-left: 20px; /* Space between title and content */
+}
+
+.our-story-content p {
+    font-size: 16px;
+    color: #555; /* Dark gray */
+    margin: 10px 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #00403D; /* Dark background */
+    color: white;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-logo img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.footer-menu,
+.footer-contact {
+    margin-top: 5px;
+    padding: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+.footer-menu ul,
+.footer-contact ul {
+    margin-top: 5px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text */
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-menu ul li a:hover {
+    color: #d9ff00; /* Highlight color on hover */
+}
+
+.footer-contact .social-icons img {
+    margin-top: 20px;
+    width: 24px;
+}
+
+.footer-bottom {
+    font-weight: bolder;
+    font-style: italic;
+    color: #00403D;
+    background-color: #d9ff00;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+}
+
+/* Hamburger Menu (for responsiveness) */
+.hamburger {
+    display: none;
+}
+@media (max-width: 768px) {
+
+    .our-story {
+        padding: 20px;
+    }
+
+    .our-story-container {
+        flex-direction: column; /* Stack on small screens */
+    }
+
+    .our-story-title h2 {
+        font-size: 28px;
+    }
+
+    .our-story-content p {
+        font-size: 14px;
+    }
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-center {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .nav-center.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+    }
+}

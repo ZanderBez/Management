@@ -26,6 +26,7 @@ html, body {
 }
 
 .nav-left .logo {
+    max-width: 200px;
     width: 100px;
     height: auto;
 }
@@ -48,18 +49,30 @@ html, body {
     color: #d9ff00;
 }
 
-.nav-right .cta-btn {
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.logout-btn {
     background-color: #d9ff00;
     color: #00403D;
-    padding: 12px 30px;
+    padding: 10px 15px;
     border-radius: 5px;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-.nav-right .cta-btn:hover {
+.logout-btn:hover {
     background-color: #b3cfcd;
+    color: #00403D;
 }
 
 /* Hamburger Menu */
@@ -462,6 +475,11 @@ html, body {
 
 @media (max-width: 768px) {
     /* Hero Section */
+
+    .nav-left .logo {
+        max-width: 200px; /* Larger logo for larger screens */
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
@@ -514,7 +532,7 @@ html, body {
     }
 
     .nav-left .logo {
-        width: 120px;
+        max-width: 200px;
     }
 
     .nav-center a {
