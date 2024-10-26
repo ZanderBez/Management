@@ -12,7 +12,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Task Management App</title>
     <!-- Link to External CSS -->
-    <link rel="stylesheet" href="../CSS/aboutUs.css"> <!-- Specific styles for About Us -->
+    <link rel="stylesheet" href="../CSS/aboutUs&contactUs.css"> <!-- Specific styles for About Us -->
 </head>
 <body>
 
@@ -78,12 +78,12 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     
     <div class="cards-container">
         <div class="card">
-            <img src="../Assets/task.png" alt="Comprehensive Task Management Icon" class="card-icon">
+            <img src="../Assets/management.png" alt="Comprehensive Task Management Icon" class="card-icon">
             <h3>Comprehensive Task Management</h3>
             <p>Our platform provides a complete overview of tasks, allowing users to track progress and deadlines effectively.</p>
         </div>
         <div class="card">
-            <img src="../Assets/task.png" alt="Real-Time Collaboration Icon" class="card-icon">
+            <img src="../Assets/Collaboration.png" alt="Real-Time Collaboration Icon" class="card-icon">
             <h3>Real-Time Collaboration</h3>
             <p>Work seamlessly with your team, share updates instantly, and enhance communication, no matter where you are.</p>
         </div>
@@ -93,22 +93,22 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
             <p>Delegate tasks effortlessly and monitor their progress through an intuitive dashboard.</p>
         </div>
         <div class="card">
-            <img src="../Assets/task.png" alt="User-Friendly Interface Icon" class="card-icon">
+            <img src="../Assets/friendly.png" alt="User-Friendly Interface Icon" class="card-icon">
             <h3>User-Friendly Interface</h3>
             <p>Our user-friendly design minimizes the learning curve, allowing users to maximize productivity from day one.</p>
         </div>
         <div class="card">
-            <img src="../Assets/task.png" alt="Secure Data Handling Icon" class="card-icon">
+            <img src="../Assets/secure.png" alt="Secure Data Handling Icon" class="card-icon">
             <h3>Secure Data Handling</h3>
             <p>We prioritize your data security with advanced encryption and regular backups, ensuring your information is always safe.</p>
         </div>
         <div class="card">
-            <img src="../Assets/task.png" alt="24/7 Support Icon" class="card-icon">
+            <img src="../Assets/support.png" alt="24/7 Support Icon" class="card-icon">
             <h3>24/7 Support</h3>
             <p>Our dedicated support team is available around the clock to assist you with any inquiries or technical issues.</p>
         </div>
         <div class="card">
-            <img src="../Assets/task.png" alt="Customizable Features Icon" class="card-icon">
+            <img src="../Assets/custom.png" alt="Customizable Features Icon" class="card-icon">
             <h3>Customizable Features</h3>
             <p>Tailor the platform to suit your unique workflows and preferences, enhancing your team’s efficiency.</p>
         </div>
@@ -120,30 +120,30 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 <section class="mission-vision">
     <div class="mission">
         <div class="mission-box">
-        <img src="../Assets/WhyUs1.png" alt="Mission Image" class="mission-image">
+        <img src="../Assets/Story.png" alt="Mission Image" class="mission-image">
         </div>
         
         <div class="mission-text">
-            <h3>Our Story</h3>
+            <h3>OUR STORY</h3>
             <p>We strive to empower teams and individuals with the tools they need to effectively manage their tasks and projects, fostering productivity and success.</p>
         </div>
     </div>
     <div class="vision">
         <div class="vision-text">
-            <h3>Our Vision</h3>
+            <h3>OUR VISION</h3>
             <p>To be the leading provider of task management solutions that inspire organizations to achieve excellence through effective collaboration.</p>
         </div>
         <div class="vision-box">
-        <img src="../Assets/whyUs1.png" alt="Vision Image" class="vision-image">
+        <img src="../Assets/Vision.png" alt="Vision Image" class="vision-image">
         </div>
     </div>
     <div class="mission">
         <div class="mission-box">
-        <img src="../Assets/WhyUs1.png" alt="Mission Image" class="mission-image">
+        <img src="../Assets/Mission.png" alt="Mission Image" class="mission-image">
         </div>
         
         <div class="mission-text">
-            <h3>Our Mission</h3>
+            <h3>OUR MISSION</h3>
             <p>We strive to empower teams and individuals with the tools they need to effectively manage their tasks and projects, fostering productivity and success.</p>
         </div>
     </div>
@@ -159,7 +159,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
             <h3>Quick Menu</h3>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#">Task</a></li>
+                <li><a href="#">About Us</a></li>
                 <li><a href="contactUs.php">Contact Us</a></li>
             </ul>
         </div>

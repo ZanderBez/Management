@@ -10,9 +10,9 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Task Management App</title>
+    <title>Contact Us - Task Management App</title>
     <!-- Link to External CSS -->
-    <link rel="stylesheet" href="../CSS/aboutUs.css"> <!-- Specific styles for About Us -->
+    <link rel="stylesheet" href="../CSS/aboutUs&contactUs.css">
 </head>
 <body>
 
@@ -45,10 +45,119 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 
 <section class="contact-us">
     <div class="contact-text">
-        <h3>ABOUT US</h3>
-        <h2>Leading the way in task management intelligence</h2>
-        <p>We believe what’s good for businesses is good for society. TaskXpert is here to build trust and demonstrate impact.</p>
+        <h3>Get in Touch</h3>
+        <h2>We're Here to Help You</h2>
+        <p>If you have any questions or inquiries, feel free to reach out to us. We're always happy to assist you!</p>
     </div>
 </section>
+
+<!-- Contact Us Section -->
+<section class="contact-detail">
+    <div class="contact-info">
+        <h1>Get in touch</h1>
+        <br>
+        <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        
+        <div class="contact-item">
+            <img src="../Assets/office.png" alt="Location Icon" class="contact-icon">
+            <div>
+                <h4>Head Office</h4>
+                <p>1297 John Vorster Dr, Southdowns, Centurion, 0062</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <img src="../Assets/email.png" alt="Email Icon" class="contact-icon">
+            <div>
+                <h4>Email Us</h4>
+                <p>info@TaskXpert.co.za</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <img src="../Assets/phone.png" alt="Phone Icon" class="contact-icon">
+            <div>
+                <h4>Call Us</h4>
+                <p>0126489200</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <h2>Send us a message</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Your Phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
+<!-- Google Map Section -->
+<section class="google-map">
+    <h1>Our Location</h1>
+    <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.321356159123!2d28.20695667628068!3d-25.891804351325547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956608911ce097%3A0x519896b4b6eda40a!2sOpen%20Window%20-%20Centurion!5e0!3m2!1sen!2sza!4v1729962547141!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="../Assets/FooterLogo.png" alt="TaskManager Logo">
+        </div>
+
+        <div class="footer-menu">
+            <h3>Quick Menu</h3>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#">Task</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>+27 98 678 463</p>
+            <p>info@TaskXpert.co.za</p>
+            <div class="social-icons">
+                <a href="#"><img src="../Assets/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="../Assets/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../Assets/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2024 TaskXpert, Inc. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('hamburger-menu').addEventListener('click', function() {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('open');
+    });
+</script>
+
 </body>
 </html>

@@ -68,6 +68,21 @@ html, body {
     transition: background-color 0.3s ease;
 }
 
+.cta-btn{
+    background-color: #d9ff00;
+    color: #00403D;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover{
+    background-color: #b3cfcd;
+    color: #00403D;
+}
+
 .logout-btn:hover {
     background-color: #b3cfcd;
     color: #00403D;
@@ -129,14 +144,14 @@ html, body {
     padding: 30px;
     border-radius: 10px;
     background-color: #00403D;
-    max-width: 90%;
+    max-width: 83%;
     height: auto;
 }
 
 .mission-image, .vision-image {
     padding-left: 100px;
-    max-width: 87%;
-    height: auto;
+    max-width: 80%;
+    height: 22vh;
     animation: floatUpDown 6s ease-in-out infinite;
 }
 
@@ -191,7 +206,7 @@ html, body {
 /* Why Choose Us Section */
 .why-choose-us {
     padding: 50px 100px;
-    background-color: #00403D; /* Background color matching your theme */
+    background-image: url("../Assets/WhyUs.png");
     color: white; /* Text color */
     text-align: center; /* Center align the text */
 }
@@ -244,6 +259,130 @@ html, body {
 
 .card p {
     font-size: 14px;
+}
+
+/* Contact Us Section */
+.contact-us {
+    margin-top: -40px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 60vh; /* Adjust height as needed */
+    background-image: url("../Assets/ContactUs.png");
+    background-position: center;
+    background-size: cover; /* Cover the entire section */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+}
+
+.contact-text {
+    max-width: 600px; /* Limit width for better readability */
+}
+
+.contact-text h3 {
+    font-size: 32px;
+}
+
+.contact-text h2 {
+    font-size: 36px;
+}
+
+.contact-text p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Contact Us Section */
+.contact-detail {
+    margin-top: -90px;
+    width: 75%; /* Keep this to maintain a responsive layout */
+    border-radius: 10px;
+    padding: 50px 100px; /* Padding for the contact section */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Align items at the top */
+    background-color: #f4f4f4; /* Light background color */
+    margin-left: auto; /* Center the flex container */
+    margin-right: auto; /* Center the flex container */
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    flex: 1; /* Take 1 part of the space */
+    color: #00403D; /* Dark text color */
+    padding-right: 50px; /* Space on the right */
+}
+
+.contact-item {
+    margin-bottom: 20px; /* Space between items */
+    display: flex; /* Use flexbox for icon and text */
+    align-items: center; /* Center align items */
+}
+
+.contact-icon {
+    width: 24px; /* Icon size */
+    height: 24px; /* Icon size */
+    margin-right: 15px; /* Space between icon and text */
+}
+
+.contact-form {
+    flex: 1; /* Take 1 part of the space */
+    padding-left: 50px; /* Space on the left */
+}
+
+.contact-form h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+    color: #00403D; /* Dark text color */
+}
+
+input, textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #00403D; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button {
+    width: 100%;
+    background-color: #00403D; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+button:hover {
+    background-color: #b3cfcd;
+    color: #00403D; /* Button color on hover */
+}
+
+.google-map {
+    padding-top: 10px;
+    color: white;
+    text-align: center; /* Center text */
+    background-color: #00403D; /* Optional: Add a background color to the section */
+}
+
+.map-container {
+    margin-top: 20px; /* Space above the map */
+    width: 100%; /* Make the map container full width */
+}
+
+.map-container iframe {
+    width: 100%; /* Make the iframe take the full width of the container */
+    height: 600px; /* Set a height for the iframe; adjust as needed */
+    border: 0; /* Remove border */
 }
 
 /* Footer */
@@ -349,6 +488,25 @@ html, body {
         height: 3px;
         background-color: white;
         margin: 5px;
+    }
+
+    .contact-detail {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .contact-info, .contact-form {
+        width: 100%; /* Full width for contact info and form */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .google-map {
+        padding: 30px 0; /* Reduce padding for map section on smaller screens */
+    }
+
+    .map-container iframe {
+        height: 300px; /* Reduce height for iframe on smaller screens */
     }
 
     .cards-container {

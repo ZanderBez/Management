@@ -67,6 +67,21 @@ html, body {
     font-weight: bold;
     transition: background-color 0.3s ease;
 }
+.cta-btn{
+    background-color: #d9ff00;
+    color: #00403D;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover{
+    background-color: #b3cfcd;
+    color: #00403D;
+}
+
 
 .logout-btn:hover {
     background-color: #b3cfcd;
