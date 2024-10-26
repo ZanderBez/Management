@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="signup-right">
             <!-- Replacing heading with the logo -->
             <div class="form-header">
-                <img src="../Assets/FormLogo.png" alt="TaskXpert Logo">
+                <img src="../Assets/SignLogo.png" alt="TaskXpert Logo">
                 <p>Create an Account</p>
             </div>
 
@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <button type="submit" class="btn-primary">Sign Up</button>
 
-                <p class="signup-link">Already have an Account?<a href="signIn.php">Sign In</a></p>
+                <p class="signup-link">Already have an Account?<a href="signIn.php"> Sign In</a></p>
             </form>
         </div>
 

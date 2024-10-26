@@ -22,12 +22,11 @@ html, body {
     width: 100%;
     background-color: #00403D;
     color: white;
-    z-index: 10;
 }
 
 .nav-left .logo {
     max-width: 200px;
-    width: 100px;
+    width: 125px;
     height: auto;
 }
 
@@ -39,10 +38,9 @@ html, body {
 .nav-center a {
     color: white;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 .nav-center a:hover {
@@ -75,25 +73,38 @@ html, body {
     color: #00403D;
 }
 
+/* About Us Section */
 .about-us {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 50px 100px;
+    height: 86.5vh;
     background-image: url("../Assets/Background.png");
 }
 
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 32px;
+    color: white;
+}
+
 .about-text h2 {
-    margin-left: 15px;
     font-size: 36px;
-    color: #ffffff;
+    color: white;
 }
 
 .about-text p {
-    margin-left: 15px;
     font-size: 16px;
-    color: #ffffff;
-    margin-top: 10px;
+    color: white;
+}
+
+.about-image {
+    flex: 1;
+    text-align: right;
 }
 
 .about-image img {
@@ -101,11 +112,66 @@ html, body {
     height: auto;
 }
 
+/* Mission and Vision Section */
+.mission-vision {
+    display: flex;
+    padding: 50px 100px;
+    background-color: #f4f4f4;
+}
+
+.mission, .vision {
+    flex: 1;
+    align-items: center;
+}
+
+.mission-box, .vision-box{
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #00403D;
+    max-width: 90%;
+    height: auto;
+}
+
+.mission-image, .vision-image {
+    padding-left: 100px;
+    max-width: 87%;
+    height: auto;
+    animation: floatUpDown 6s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mission-text, .vision-text {
+    padding: 20px 0px;
+}
+
+.mission-text h3, .vision-text h3 {
+    font-size: 28px;
+    color: #00403D;
+}
+
+.mission-text p, .vision-text p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Stats Section */
 .stats {
     display: flex;
     justify-content: space-around;
     padding: 50px 0;
-    background-color: #f4f4f4;
+    background-color: #b3cfcd;
 }
 
 .stat-card {
@@ -122,48 +188,62 @@ html, body {
     color: #555;
 }
 
-/* Our Story Section */
-.our-story {
-    padding: 100px 300px;
-    background-color: #f9f9f9; /* Light background */
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 50px 100px;
+    background-color: #00403D; /* Background color matching your theme */
+    color: white; /* Text color */
+    text-align: center; /* Center align the text */
 }
 
-.our-story-container {
-    display: flex; /* Flexbox for layout */
-    align-items: flex-start; /* Align items to the top */
+.why-choose-us h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-.our-story-title {
-    flex: 1; /* Take up space on the left */
-    position: relative; /* For line positioning */
-}
-
-.our-story-title h2 {
-    font-size: 36px;
-    color: #00403D; /* Dark green */
-    margin-bottom: 10px;
-}s
-
-.our-story-title h2::before {
-    content: ""; 
-    position: absolute;
-    left: -20px; /* Adjust position as needed */
-    top: 50%; /* Center vertically */
-    height: 40%; /* Line height */
-    width: 5px; /* Line thickness */
-    background-color: #00403D; /* Line color */
-    transform: translateY(-50%); /* Center the line */
-}
-
-.our-story-content {
-    flex: 2; /* Take up space on the right */
-    padding-left: 20px; /* Space between title and content */
-}
-
-.our-story-content p {
+.why-choose-us p {
     font-size: 16px;
-    color: #555; /* Dark gray */
-    margin: 10px 0;
+    margin-bottom: 40px;
+}
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Center the cards */
+}
+
+/* Card Styles */
+.card {
+    background-color: white; /* Card background color */
+    color: #00403D; /* Card text color */
+    border-radius: 10px;
+    padding: 40px;
+    margin: 40px;
+    width: 320px; /* Fixed width for cards */
+    transition: transform 0.3s ease;
+}
+
+.card-icon {
+    width: 50px; /* Adjust the size of the icon */
+    height: 50px; /* Ensure it maintains its aspect ratio */
+    margin-bottom: 15px; /* Space between icon and title */
+    display: block; /* Ensure it's displayed as block to center */
+    margin-left: auto; /* Center the icon horizontally */
+    margin-right: auto; /* Center the icon horizontally */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
 }
 
 /* Footer */
@@ -188,8 +268,9 @@ html, body {
 }
 
 .footer-logo img {
+    height: auto;
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
 }
 
 .footer-menu,
@@ -239,23 +320,8 @@ html, body {
 .hamburger {
     display: none;
 }
+
 @media (max-width: 768px) {
-
-    .our-story {
-        padding: 20px;
-    }
-
-    .our-story-container {
-        flex-direction: column; /* Stack on small screens */
-    }
-
-    .our-story-title h2 {
-        font-size: 28px;
-    }
-
-    .our-story-content p {
-        font-size: 14px;
-    }
     .navbar {
         flex-direction: column;
         padding: 10px;
@@ -283,5 +349,40 @@ html, body {
         height: 3px;
         background-color: white;
         margin: 5px;
+    }
+
+    .cards-container {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center cards */
+    }
+
+    .card {
+        width: 90%; /* Full width for better spacing */
+    }
+
+    .why-choose-us {
+        flex-direction: column; /* Stack items on smaller screens */
+        padding: 30px; /* Adjust padding */
+    }
+
+    .why-choose-us-text,
+    .why-choose-us-image {
+        width: 100%; /* Full width for better spacing */
+        margin-bottom: 20px; /* Add space between items */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo,
+    .footer-menu,
+    .footer-contact {
+        text-align: center;
+    }
+
+    .mission-vision {
+        flex-direction: column;
     }
 }

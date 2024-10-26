@@ -18,14 +18,14 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 
 <nav class="navbar">
     <div class="nav-left">
-        <img src="../Assets/Logo (1).png" alt="TaskManager Logo" class="logo">
+        <img src="../Assets/Navlogo.png" alt="TaskManager Logo" class="logo">
     </div>
     <div class="nav-center" id="nav-links">
         <a href="index.php">Home</a>
-        <a href="aboutUs.php">Task</a>
+        <a href="#">Task</a>
         <a href="#">Create Task</a>
-        <a href="#">About us</a>
-        <a href="#">Contact us</a>
+        <a href="aboutUs.php">About us</a>
+        <a href="contactUs.php">Contact us</a>
     </div>
     <div class="nav-right">
         <?php if ($is_logged_in): ?>
@@ -67,19 +67,16 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
             <img src="../Assets/task.png" alt="Software Services">
             <h3>Streamlined Task Creation</h3>
             <p>Our platform allows you to create tasks easily, assign them to team members, and set deadlines efficiently.</p>
-            <a href="#" class="learn-more">Learn more</a>
         </div>
         <div class="service-card">
             <img src="../Assets/Collaboration.png" alt="Cloud Services">
             <h3>Real-Time Collaboration</h3>
             <p>Collaborate with your team in real-time, ensuring seamless updates and transparent communication..</p>
-            <a href="#" class="learn-more">Learn more</a>
         </div>
         <div class="service-card">
             <img src="../Assets/management.png" alt="Security Services">
             <h3>Comprehensive Task Management</h3>
             <p>Manage tasks, track progress, and stay on top of your project goals with our all-in-one task management tool.</p>
-            <a href="#" class="learn-more">Learn more</a>
         </div>
     </div>
 
@@ -104,7 +101,8 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
                 <li>✔ Secure and Reliable Data Handling</li>
                 <li>✔ 24/7 Support and Assistance</li>
             </ul>
-            <a href="#" class="read-more-btn">Read More</a>
+            <br>
+            <a href="aboutUs.php" class="read-more-btn">Read More</a>
         </div>
     </div>
 </section>
@@ -152,15 +150,15 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-logo">
-            <img src="../Assets/Logo (1).png" alt="TaskManager Logo">
+            <img src="../Assets/FooterLogo.png" alt="TaskManager Logo">
         </div>
 
         <div class="footer-menu">
             <h3>Quick Menu</h3>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Task</a></li>
-                <li><a href="#">Create Task</a></li>
+                <li><a href="aboutUs.php">About Us</a></li>
+                <li><a href="contactUs.php">Contact Us</a></li>
             </ul>
         </div>
 

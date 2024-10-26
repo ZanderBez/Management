@@ -69,7 +69,7 @@ html, body {
 
 .form-group input:focus {
     outline: none;
-    border-color: #d9ff00; /* Yellow highlight on focus */
+    border-color: #00403D; /* Yellow highlight on focus */
 }
 
 .btn-primary {

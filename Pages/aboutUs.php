@@ -12,7 +12,6 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Task Management App</title>
     <!-- Link to External CSS -->
-    <link rel="stylesheet" href="../CSS/index.css"> <!-- For Navbar and Footer -->
     <link rel="stylesheet" href="../CSS/aboutUs.css"> <!-- Specific styles for About Us -->
 </head>
 <body>
@@ -20,14 +19,14 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 <!-- Navbar -->
 <nav class="navbar">
     <div class="nav-left">
-        <img src="../Assets/Logo (1).png" alt="TaskManager Logo" class="logo">
+        <img src="../Assets/Navlogo.png" alt="TaskManager Logo" class="logo">
     </div>
     <div class="nav-center" id="nav-links">
         <a href="index.php">Home</a>
         <a href="#">Task</a>
         <a href="#">Create Task</a>
         <a href="aboutUs.php">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="contactUs.php">Contact Us</a>
     </div>
     <div class="nav-right">
         <?php if ($is_logged_in): ?>
@@ -47,58 +46,121 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 <!-- About Us Section -->
 <section class="about-us">
     <div class="about-text">
+        <h3>ABOUT US</h3>
         <h2>Leading the way in task management intelligence</h2>
         <p>We believe what’s good for businesses is good for society. TaskXpert is here to build trust and demonstrate impact.</p>
     </div>
     <div class="about-image">
-        <img src="../Assets/aboutus.png" alt="About Us Image">
+        <img src="../Assets/aboutUs.png" alt="About Us Image">
     </div>
 </section>
 
 <!-- Stats Section -->
 <section class="stats">
-    <div class="stat-card">
-        <h3>6,000+</h3>
+    <div class="stat-card" id="active-users">
+        <h3>0</h3>
         <p>Active users</p>
     </div>
-    <div class="stat-card">
-        <h3>150+</h3>
+    <div class="stat-card" id="awarded-patents">
+        <h3>0</h3>
         <p>Awarded patents</p>
     </div>
-    <div class="stat-card">
-        <h3>500+</h3>
+    <div class="stat-card" id="employees">
+        <h3>0</h3>
         <p>Employees</p>
     </div>
 </section>
 
-<!-- Our Story Section -->
-<section class="our-story">
-    <div class="our-story-container">
-        <div class="our-story-title">
-            <h2>Our Story</h2>
+<!-- Why Choose Us Section -->
+<section class="why-choose-us">
+    <h2>Why Choose TaskXpert?</h2>
+    <p>At TaskXpert, we offer tailored task management solutions designed to fit the diverse needs of teams and individuals. Here’s how we stand out:</p>
+    
+    <div class="cards-container">
+        <div class="card">
+            <img src="../Assets/task.png" alt="Comprehensive Task Management Icon" class="card-icon">
+            <h3>Comprehensive Task Management</h3>
+            <p>Our platform provides a complete overview of tasks, allowing users to track progress and deadlines effectively.</p>
         </div>
-        <div class="our-story-content">
-            <p>At TaskXpert, we were founded on the belief that businesses can drive positive change. Our mission is to empower organizations with innovative task management solutions that enhance productivity and foster collaboration.</p>
-            <p>In a world where technology and teamwork are vital, we strive to build trust and create impact. Our platform is designed to help teams streamline their processes, enabling them to focus on what truly matters: achieving their goals.</p>
-            <p>Today, we partner with businesses of all sizes, delivering a market-defining task management platform that prioritizes transparency, efficiency, and user satisfaction. Together, we're shaping the future of work and transforming how teams operate.</p>
-            <p>Join us on our journey as we continue to redefine what good business looks like, ensuring every company can thrive in an ever-evolving landscape.</p>
+        <div class="card">
+            <img src="../Assets/task.png" alt="Real-Time Collaboration Icon" class="card-icon">
+            <h3>Real-Time Collaboration</h3>
+            <p>Work seamlessly with your team, share updates instantly, and enhance communication, no matter where you are.</p>
+        </div>
+        <div class="card">
+            <img src="../Assets/task.png" alt="Easy Task Assignment Icon" class="card-icon">
+            <h3>Easy Task Assignment</h3>
+            <p>Delegate tasks effortlessly and monitor their progress through an intuitive dashboard.</p>
+        </div>
+        <div class="card">
+            <img src="../Assets/task.png" alt="User-Friendly Interface Icon" class="card-icon">
+            <h3>User-Friendly Interface</h3>
+            <p>Our user-friendly design minimizes the learning curve, allowing users to maximize productivity from day one.</p>
+        </div>
+        <div class="card">
+            <img src="../Assets/task.png" alt="Secure Data Handling Icon" class="card-icon">
+            <h3>Secure Data Handling</h3>
+            <p>We prioritize your data security with advanced encryption and regular backups, ensuring your information is always safe.</p>
+        </div>
+        <div class="card">
+            <img src="../Assets/task.png" alt="24/7 Support Icon" class="card-icon">
+            <h3>24/7 Support</h3>
+            <p>Our dedicated support team is available around the clock to assist you with any inquiries or technical issues.</p>
+        </div>
+        <div class="card">
+            <img src="../Assets/task.png" alt="Customizable Features Icon" class="card-icon">
+            <h3>Customizable Features</h3>
+            <p>Tailor the platform to suit your unique workflows and preferences, enhancing your team’s efficiency.</p>
         </div>
     </div>
 </section>
 
+
+<!-- Mission and Vision Section -->
+<section class="mission-vision">
+    <div class="mission">
+        <div class="mission-box">
+        <img src="../Assets/WhyUs1.png" alt="Mission Image" class="mission-image">
+        </div>
+        
+        <div class="mission-text">
+            <h3>Our Story</h3>
+            <p>We strive to empower teams and individuals with the tools they need to effectively manage their tasks and projects, fostering productivity and success.</p>
+        </div>
+    </div>
+    <div class="vision">
+        <div class="vision-text">
+            <h3>Our Vision</h3>
+            <p>To be the leading provider of task management solutions that inspire organizations to achieve excellence through effective collaboration.</p>
+        </div>
+        <div class="vision-box">
+        <img src="../Assets/whyUs1.png" alt="Vision Image" class="vision-image">
+        </div>
+    </div>
+    <div class="mission">
+        <div class="mission-box">
+        <img src="../Assets/WhyUs1.png" alt="Mission Image" class="mission-image">
+        </div>
+        
+        <div class="mission-text">
+            <h3>Our Mission</h3>
+            <p>We strive to empower teams and individuals with the tools they need to effectively manage their tasks and projects, fostering productivity and success.</p>
+        </div>
+    </div>
+</section>
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-logo">
-            <img src="../Assets/Logo (1).png" alt="TaskManager Logo">
+            <img src="../Assets/FooterLogo.png" alt="TaskManager Logo">
         </div>
 
         <div class="footer-menu">
             <h3>Quick Menu</h3>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="#">Task</a></li>
-                <li><a href="#">Create Task</a></li>
+                <li><a href="contactUs.php">Contact Us</a></li>
             </ul>
         </div>
 
@@ -123,6 +185,41 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     document.getElementById('hamburger-menu').addEventListener('click', function() {
         const navbar = document.querySelector('.navbar');
         navbar.classList.toggle('open');
+    });
+     // Function to animate the counting effect
+     function animateCounter(id, start, end, duration) {
+        let obj = document.getElementById(id).getElementsByTagName('h3')[0]; // Get the <h3> element
+        let range = end - start;
+        let current = start;
+        let increment = end > start ? 1 : -1;
+        let stepTime = Math.abs(Math.floor(duration / range)); // Calculate the time between increments
+
+        let timer = setInterval(function() {
+            current += increment;
+            obj.textContent = current.toLocaleString() + '+'; // Update the displayed number with a comma
+            if (current === end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    // Function to trigger the animation when the stats section is visible
+    function startCounting() {
+        animateCounter('active-users', 0, 6000, 2000);
+        animateCounter('awarded-patents', 0, 150, 2000);
+        animateCounter('employees', 0, 500, 2000);
+    }
+
+    // Check if the stats section is in the viewport
+    window.addEventListener('scroll', function() {
+        const statsSection = document.querySelector('.stats');
+        const statsTop = statsSection.getBoundingClientRect().top;
+        const statsVisible = statsTop < window.innerHeight && statsTop >= 0;
+
+        if (statsVisible) {
+            startCounting(); // Start the counting animation
+            window.removeEventListener('scroll', arguments.callee); // Remove the event listener once counting has started
+        }
     });
 </script>
 

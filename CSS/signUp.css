@@ -51,7 +51,7 @@ html, body {
 }
 
 .form-header img {
-    width: 380px; /* Adjust logo size as needed */
+    max-width: 380px; /* Adjust logo size as needed */
     margin-bottom: 20px;
 }
 

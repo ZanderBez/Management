@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- Left Section with Form -->
         <div class="signup-left">
             <div class="form-header">
-                <img src="../Assets/FormLogo.png" alt="TaskXpert Logo" class="logo">
+                <img src="../Assets/SignLogo.png" alt="TaskXpert Logo" class="logo">
                 <p>Sign in to your account</p>
             </div>
 

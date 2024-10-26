@@ -22,12 +22,11 @@ html, body {
     width: 100%;
     background-color: #00403D;
     color: white;
-    z-index: 10;
 }
 
 .nav-left .logo {
     max-width: 200px;
-    width: 100px;
+    width: 125px;
     height: auto;
 }
 
@@ -39,10 +38,9 @@ html, body {
 .nav-center a {
     color: white;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 .nav-center a:hover {
@@ -73,4 +71,14 @@ html, body {
 .logout-btn:hover {
     background-color: #b3cfcd;
     color: #00403D;
+}
+
+.contact-us{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+    height: 86.5vh;
+    background-color: #00403D;
+    background-image: url("../Assets/Background.png");
 }
