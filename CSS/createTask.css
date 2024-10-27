@@ -1,0 +1,352 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    background-color: transparent;
+    background-color: #b3cfcd;
+
+}
+
+p{
+    font-family: "Crimson Pro", serif; 
+}
+
+h1, h2, h3, h4{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+    background-color: #00403D;
+    color: white;
+}
+
+.nav-left .logo {
+    max-width: 200px;
+    width: 125px;
+    height: auto;
+}
+
+.nav-center {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-center a {
+    font-family: "Crimson Pro", serif; 
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav-center a:hover {
+    color: #d9ff00;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.logout-btn {
+    font-family: "Montserrat", sans-serif;
+    background-color: #d9ff00;
+    color: #00403D;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.cta-btn{
+    font-family: "Montserrat", sans-serif;
+    background-color: #d9ff00;
+    color: #00403D;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover{
+    background-color: #b3cfcd;
+    color: #00403D;
+}
+
+
+.logout-btn:hover {
+    background-color: #b3cfcd;
+    color: #00403D;
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+.hamburger span:last-child {
+    margin-bottom: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #00403D; /* Dark background */
+    color: white;
+    text-align: center;
+}
+
+.footer-container {
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-logo img {
+    width: 100%;
+    max-width: 250px;
+}
+
+.footer-menu,
+.footer-contact {
+    margin-top: 5px;
+    padding: 20px;
+    flex: 1;
+    text-align: left;
+}
+
+.footer-menu ul,
+.footer-contact ul {
+    margin-top: 5px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu ul li a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text */
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-menu ul li a:hover {
+    color: #d9ff00; /* Highlight color on hover */
+}
+
+.footer-contact .social-icons img {
+    margin-top: 20px;
+    width: 24px;
+}
+
+.create-task {
+    margin-top: -40px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 60vh; /* Adjust height as needed */
+    background-image: url("../Assets/ContactUs.png");
+    background-position: center;
+    background-size: cover; /* Cover the entire section */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+}
+
+.task-text {
+    max-width: 600px; /* Limit width for better readability */
+}
+
+.task-text h3 {
+    font-size: 32px;
+}
+
+.task-text h2 {
+    font-size: 36px;
+}
+
+.task-text p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.task-creation {
+    max-width: 800px; /* Max width for the form section */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -100px;
+    margin-bottom: 30px;
+    padding: 60px; /* Padding around the form section */
+    background-color: white; /* Background color for the form section */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease;
+}
+
+.task-creation:hover {
+    transform: translateY(-12px); /* Slight lift on hover */
+}
+
+.task-creation h2 {
+    padding-bottom: 15px;
+}
+
+
+.form-row {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between fields */
+    margin-bottom: 15px; /* Space between rows */
+}
+
+.form-group {
+    flex: 1; /* Make each group take equal space */
+    margin-right: 20px; /* Right margin */
+}
+
+.form-group:last-child {
+    margin-right: 0; /* No margin for the last item in the row */
+}
+
+.form-group.full-width {
+    flex-basis: 100%; /* Full width for description */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+    color: #00403D; /* Dark text color */
+}
+
+input, select, textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
+}
+
+button {
+    font-weight: bold;
+    width: 100%;
+    background-color: #00403D; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+button:hover {
+    color: #00403D;
+    background-color: #b3cfcd; /* Button color on hover */
+}
+
+.footer-bottom {
+    font-weight: bolder;
+    font-style: italic;
+    color: #00403D;
+    background-color: #d9ff00;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center; 
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-center {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .nav-center.open {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+    }
+
+    .form-row {
+        flex-direction: column; /* Stack fields on smaller screens */
+    }
+
+    .form-group {
+        margin-right: 0; /* No margin for stacked fields */
+        margin-bottom: 15px; /* Space between fields */
+    }
+
+    .form-group.full-width {
+        flex-basis: auto; /* Reset for full-width on smaller screens */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo,
+    .footer-menu,
+    .footer-contact {
+        text-align: center;
+    }
+
+
+}

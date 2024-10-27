@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="signup-left">
             <div class="form-header">
                 <img src="../Assets/SignLogo.png" alt="TaskXpert Logo" class="logo">
-                <p>Sign in to your account</p>
+                <h2>Log In:</h2>
             </div>
 
             <!-- Ensure the form submits to itself -->
@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <button type="submit" class="btn-primary">Sign In</button>
                 <p class="signin-link">
-                    Don't have an account? <a href="signUp.php">Sign Up</a>
+                    Don't have an account? <a href="signUp.php"> Sign Up</a>
                 </p>
             </form>
         </div>

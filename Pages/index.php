@@ -4,6 +4,24 @@ session_start(); // Start session
 // Check if the user is logged in
 $is_logged_in = isset($_SESSION['user_name']);
 $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
+$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+
+// Include database connection
+require '../db_connect.php';
+
+// Retrieve tasks for the logged-in user
+$tasks = [];
+if ($user_id) {
+    $stmt = $conn->prepare("SELECT * FROM tasks WHERE user_id = ?");
+    $stmt->bind_param("i", $user_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    
+    while ($row = $result->fetch_assoc()) {
+        $tasks[] = $row;
+    }
+    $stmt->close();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,19 +39,17 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
         <img src="../Assets/Navlogo.png" alt="TaskManager Logo" class="logo">
     </div>
     <div class="nav-center" id="nav-links">
-        <a href="index.php">Home</a>
-        <a href="#">Task</a>
-        <a href="#">Create Task</a>
+        <a href="#">Home</a>
+        <a href="task.php">Task</a>
+        <a href="createTask.php">Create Task</a>
         <a href="aboutUs.php">About us</a>
         <a href="contactUs.php">Contact us</a>
     </div>
     <div class="nav-right">
         <?php if ($is_logged_in): ?>
-            <!-- Display username and Logout button if logged in -->
             <span class="user-name"><?php echo htmlspecialchars($user_name); ?></span>
             <a href="logout.php" class="logout-btn">Logout</a>
         <?php else: ?>
-            <!-- If not logged in, show Get Started button -->
             <a href="signUp.php" class="cta-btn">Get Started</a>
         <?php endif; ?>
     </div>
@@ -49,7 +65,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     <div class="hero-content">
         <p>Welcome to TaskManager</p>
         <h1>We solve business problems with technology.</h1>
-        <p>Our performance is your success. Our passion iheros innovation. Our expertise is unmatched. We get you more.</p>
+        <p>Our performance is your success. Our passion is innovation. Our expertise is unmatched. We get you more.</p>
         <div class="hero-buttons">
             <a href="#" class="btn-primary">Create a Task</a>
             <a href="#" class="btn-secondary">View Your task</a>
@@ -71,7 +87,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
         <div class="service-card">
             <img src="../Assets/Collaboration.png" alt="Cloud Services">
             <h3>Real-Time Collaboration</h3>
-            <p>Collaborate with your team in real-time, ensuring seamless updates and transparent communication..</p>
+            <p>Collaborate with your team in real-time, ensuring seamless updates and transparent communication.</p>
         </div>
         <div class="service-card">
             <img src="../Assets/management.png" alt="Security Services">
@@ -81,8 +97,39 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     </div>
 
     <div class="happy-customers">
-        <h1>Join our <span id="customer-count">0</span> happy customers with your task today</h1>
+        <p>Join our <span id="customer-count">0</span> happy customers with your task today</p>
     </div>
+</section>
+
+<!-- Task List Section -->
+<section class="task-list">
+    <h2>Your Tasks</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Due Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php if (count($tasks) > 0): ?>
+                <?php foreach ($tasks as $task): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($task['title']); ?></td>
+                        <td><?php echo htmlspecialchars($task['description']); ?></td>
+                        <td><?php echo htmlspecialchars($task['date']); ?></td>
+                        <td><?php echo htmlspecialchars($task['status']); ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="4">No tasks found.</td>
+                </tr>
+            <?php endif; ?>
+        </tbody>
+    </table>
 </section>
 
 <section class="why-us-section">
@@ -121,7 +168,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
                     <div class="testimonial-stars">
                         &#9733;&#9733;&#9733;&#9733;&#9734;
                     </div>
-                    <p class="testimonial-author">John Doe - Cape Town</p>
+                    <h4 class="testimonial-author">John Doe - Cape Town</h4>
                 </div>
 
                 <div class="testimonial-card">
@@ -129,15 +176,15 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
                     <div class="testimonial-stars">
                         &#9733;&#9733;&#9733;&#9733;&#9733;
                     </div>
-                    <p class="testimonial-author">Jane Smith - Johannesburg</p>
+                    <h4 class="testimonial-author">Jane Smith - Johannesburg</h4>
                 </div>
 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"The best task management platform we’ve ever used! Simple, intuitive, and effective. Highly recommend TaskManager to all growing teams.Its a live saver"</p>
+                    <p class="testimonial-text">"The best task management platform we’ve ever used! Simple, intuitive, and effective. Highly recommend TaskManager to all growing teams. It's a lifesaver."</p>
                     <div class="testimonial-stars">
                         &#9733;&#9733;&#9733;&#9733;&#9733;
                     </div>
-                    <p class="testimonial-author">Mike Brown - Durban</p>
+                    <h4 class="testimonial-author">Mike Brown - Durban</h4>
                 </div>
             </div>
 
@@ -145,7 +192,6 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
         </div>
     </div>
 </section>
-
 
 <footer class="footer">
     <div class="footer-container">
@@ -178,9 +224,6 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
         <p>&copy; 2024 TaskXpert, Inc. All Rights Reserved.</p>
     </div>
 </footer>
-
-
-
 
 <script>
     document.getElementById('hamburger-menu').addEventListener('click', function() {

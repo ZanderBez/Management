@@ -8,7 +8,6 @@
 html, body {
     width: 100%;
     height: 100%;
-    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
 }
 
@@ -55,8 +54,9 @@ html, body {
     margin-bottom: 20px;
 }
 
-.form-header p {
+.form-header h2 {
     font-weight: bold;
+    font-family: "Montserrat", sans-serif;
 }
 
 .signup-form {
@@ -64,20 +64,23 @@ html, body {
 }
 
 .form-group {
+    font-family: "Crimson Pro", serif;
     margin-bottom: 20px;
 }
 
 .form-group label {
+    font-family: "Crimson Pro", serif;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     color: #666;
     margin-bottom: 5px;
 }
 
 .form-group input {
+    font-family: "Crimson Pro", serif;
     width: 100%;
     padding: 10px 15px;
-    font-size: 14px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
@@ -96,6 +99,7 @@ html, body {
 }
 
 .role-option-group {
+    
     display: flex; /* Display the radio buttons and text next to each other */
     gap: 5px;
 }
@@ -103,16 +107,19 @@ html, body {
 .role-option {
     display: flex;
     align-items: center; /* This ensures the text stays aligned next to the radio button */
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: bold;
     color: #555;
 }
 
 .role-option input {
+    
     vertical-align: middle; /* Ensures the radio button stays aligned vertically with the label */
 }
 
 /* Button Styles */
 .btn-primary {
+    font-family: "Montserrat", sans-serif;
     width: 100%;
     padding: 12px;
     background-color: #00403D;
@@ -131,9 +138,10 @@ html, body {
 }
 
 .signup-link {
+    font-family: "Crimson Pro", serif;
     text-align: center;
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .signup-link a {

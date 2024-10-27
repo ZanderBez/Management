@@ -34,6 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - TaskXpert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Link to the CSS file -->
     <link rel="stylesheet" href="../CSS/signUp.css">
 </head>
@@ -43,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- Replacing heading with the logo -->
             <div class="form-header">
                 <img src="../Assets/SignLogo.png" alt="TaskXpert Logo">
-                <p>Create an Account</p>
+                <h2>Create an Account:</h2>
             </div>
 
             <form action="" method="POST" class="signup-form" onsubmit="return validatePasswords()">
@@ -82,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <button type="submit" class="btn-primary">Sign Up</button>
 
-                <p class="signup-link">Already have an Account?<a href="signIn.php"> Sign In</a></p>
+                <p class="signup-link">Already have an Account?<a href="signIn.php"> Log In</a></p>
             </form>
         </div>
 

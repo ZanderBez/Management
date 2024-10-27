@@ -23,9 +23,9 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     </div>
     <div class="nav-center" id="nav-links">
         <a href="index.php">Home</a>
-        <a href="#">Task</a>
-        <a href="#">Create Task</a>
-        <a href="aboutUs.php">About Us</a>
+        <a href="task.php">Task</a>
+        <a href="createTask.php">Create Task</a>
+        <a href="#">About Us</a>
         <a href="contactUs.php">Contact Us</a>
     </div>
     <div class="nav-right">

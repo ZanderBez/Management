@@ -13,6 +13,14 @@ html, body {
     color: #333;
 }
 
+p{
+    font-family: "Crimson Pro", serif; 
+}
+
+h1, h2, h3, h4{
+    font-family: "Montserrat", sans-serif;
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -36,6 +44,7 @@ html, body {
 }
 
 .nav-center a {
+    font-family: "Crimson Pro", serif; 
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -275,6 +284,8 @@ html, body {
     text-align: center; /* Center text */
 }
 
+
+
 .contact-text {
     max-width: 600px; /* Limit width for better readability */
 }
@@ -305,6 +316,12 @@ html, body {
     margin-left: auto; /* Center the flex container */
     margin-right: auto; /* Center the flex container */
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+
+.contact-detail:hover{
+    transform: translateY(-12px);
 }
 
 .contact-info {
@@ -352,6 +369,7 @@ input, textarea {
 }
 
 button {
+    font-weight: bold;
     width: 100%;
     background-color: #00403D; /* Button color */
     color: white; /* Button text color */
