@@ -11,8 +11,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Task Management App</title>
-    <!-- Link to External CSS -->
-    <link rel="stylesheet" href="../CSS/aboutUs&contactUs.css"> <!-- Specific styles for About Us -->
+    <link rel="stylesheet" href="../CSS/aboutUs&contactUs.css">
 </head>
 <body>
 
@@ -188,15 +187,15 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     });
      // Function to animate the counting effect
      function animateCounter(id, start, end, duration) {
-        let obj = document.getElementById(id).getElementsByTagName('h3')[0]; // Get the <h3> element
+        let obj = document.getElementById(id).getElementsByTagName('h3')[0];
         let range = end - start;
         let current = start;
         let increment = end > start ? 1 : -1;
-        let stepTime = Math.abs(Math.floor(duration / range)); // Calculate the time between increments
+        let stepTime = Math.abs(Math.floor(duration / range));
 
         let timer = setInterval(function() {
             current += increment;
-            obj.textContent = current.toLocaleString() + '+'; // Update the displayed number with a comma
+            obj.textContent = current.toLocaleString() + '+';
             if (current === end) {
                 clearInterval(timer);
             }
@@ -217,8 +216,8 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
         const statsVisible = statsTop < window.innerHeight && statsTop >= 0;
 
         if (statsVisible) {
-            startCounting(); // Start the counting animation
-            window.removeEventListener('scroll', arguments.callee); // Remove the event listener once counting has started
+            startCounting();
+            window.removeEventListener('scroll', arguments.callee);
         }
     });
 </script>

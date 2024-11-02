@@ -69,15 +69,15 @@ html, body {
 
 .form-group input:focus {
     outline: none;
-    border-color: #00403D; /* Yellow highlight on focus */
+    border-color: #00403D; 
 }
 
 .btn-primary {
     font-family: "Montserrat", sans-serif;
     width: 100%;
     padding: 12px;
-    background-color: #00403D; /* Dark green button color */
-    color: #b3cfcd; /* Light green text */
+    background-color: #00403D; 
+    color: #b3cfcd; 
     font-size: 16px;
     border: none;
     border-radius: 5px;
@@ -88,7 +88,7 @@ html, body {
 
 .btn-primary:hover {
     background-color: #b3cfcd;
-    color: #00403D; /* Reverse colors on hover */
+    color: #00403D; 
 }
 
 .signin-link {
@@ -98,7 +98,7 @@ html, body {
 }
 
 .signin-link a {
-    color: #00403D; /* Dark green */
+    color: #00403D; 
     text-decoration: none;
 }
 
@@ -106,7 +106,7 @@ html, body {
     text-decoration: underline;
 }
 
-/* Right Section with Image (swapped to the right) */
+
 .signup-right {
     flex: 1;
     background-image: url("../Assets/Background.png");
@@ -134,7 +134,7 @@ html, body {
     }
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
     .signup-container {
         flex-direction: column;

@@ -29,7 +29,6 @@ if ($user_id) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Management App</title>
-    <!-- Link to External CSS -->
     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body>
@@ -63,7 +62,7 @@ if ($user_id) {
 <!-- Hero Section -->
 <section class="hero">
     <div class="hero-content">
-        <p>Welcome to TaskManager</p>
+        <p>Welcome to TaskXpert</p>
         <h1>We solve business problems with technology.</h1>
         <p>Our performance is your success. Our passion is innovation. Our expertise is unmatched. We get you more.</p>
         <div class="hero-buttons">
@@ -236,7 +235,7 @@ if ($user_id) {
         let range = end - start;
         let current = start;
         let increment = end > start ? 1 : -1;
-        let stepTime = Math.abs(Math.floor(duration / range)); // Speed up animation by reducing duration
+        let stepTime = Math.abs(Math.floor(duration / range));
         let timer = setInterval(function () {
             current += increment;
             obj.textContent = current.toLocaleString();
@@ -253,7 +252,7 @@ if ($user_id) {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateValue("customer-count", 0, 10000, 1000); // Increase to 30,000 in 1 second
+                    animateValue("customer-count", 0, 10000, 1000);
                     observer.unobserve(customerSection);
                 }
             });

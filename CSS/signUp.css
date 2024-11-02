@@ -45,12 +45,12 @@ html, body {
 
 /* Form Styles */
 .form-header {
-    text-align: center; /* Center the logo */
+    text-align: center;
     margin-bottom: 20px;
 }
 
 .form-header img {
-    max-width: 380px; /* Adjust logo size as needed */
+    max-width: 380px;
     margin-bottom: 20px;
 }
 
@@ -91,7 +91,7 @@ html, body {
     border-color: #00403D;
 }
 
-/* Styling for Radio Buttons (Role Selection) */
+
 .form-group p {
     margin-bottom: 10px;
     color: #00403D;
@@ -100,13 +100,13 @@ html, body {
 
 .role-option-group {
     
-    display: flex; /* Display the radio buttons and text next to each other */
+    display: flex; 
     gap: 5px;
 }
 
 .role-option {
     display: flex;
-    align-items: center; /* This ensures the text stays aligned next to the radio button */
+    align-items: center;
     font-size: 18px;
     font-weight: bold;
     color: #555;
@@ -114,7 +114,7 @@ html, body {
 
 .role-option input {
     
-    vertical-align: middle; /* Ensures the radio button stays aligned vertically with the label */
+    vertical-align: middle;
 }
 
 /* Button Styles */
@@ -145,7 +145,7 @@ html, body {
 }
 
 .signup-link a {
-    color: #00403D; /* Dark green */
+    color: #00403D;
     text-decoration: none;
 }
 

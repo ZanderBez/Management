@@ -7,7 +7,7 @@
 
 html, body {
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden; 
     font-family: 'Arial', sans-serif;
     background-color: transparent;
     color: #333;
@@ -216,8 +216,8 @@ h1, h2, h3, h4{
 .why-choose-us {
     padding: 50px 100px;
     background-image: url("../Assets/WhyUs.png");
-    color: white; /* Text color */
-    text-align: center; /* Center align the text */
+    color: white;
+    text-align: center;
 }
 
 .why-choose-us h2 {
@@ -233,32 +233,32 @@ h1, h2, h3, h4{
 /* Cards Container */
 .cards-container {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    justify-content: center; /* Center the cards */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Card Styles */
 .card {
-    background-color: white; /* Card background color */
-    color: #00403D; /* Card text color */
+    background-color: white; 
+    color: #00403D;
     border-radius: 10px;
     padding: 40px;
     margin: 40px;
-    width: 320px; /* Fixed width for cards */
+    width: 320px;
     transition: transform 0.3s ease;
 }
 
 .card-icon {
-    width: 50px; /* Adjust the size of the icon */
-    height: 50px; /* Ensure it maintains its aspect ratio */
-    margin-bottom: 15px; /* Space between icon and title */
-    display: block; /* Ensure it's displayed as block to center */
-    margin-left: auto; /* Center the icon horizontally */
-    margin-right: auto; /* Center the icon horizontally */
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
+    transform: translateY(-5px);
 }
 
 .card h3 {
@@ -274,20 +274,20 @@ h1, h2, h3, h4{
 .contact-us {
     margin-top: -40px;
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 60vh; /* Adjust height as needed */
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
     background-image: url("../Assets/ContactUs.png");
     background-position: center;
-    background-size: cover; /* Cover the entire section */
-    color: white; /* Text color */
-    text-align: center; /* Center text */
+    background-size: cover;
+    color: white;
+    text-align: center;
 }
 
 
 
 .contact-text {
-    max-width: 600px; /* Limit width for better readability */
+    max-width: 600px;
 }
 
 .contact-text h3 {
@@ -306,15 +306,15 @@ h1, h2, h3, h4{
 /* Contact Us Section */
 .contact-detail {
     margin-top: -90px;
-    width: 75%; /* Keep this to maintain a responsive layout */
+    width: 75%;
     border-radius: 10px;
-    padding: 50px 100px; /* Padding for the contact section */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Align items at the top */
-    background-color: #f4f4f4; /* Light background color */
-    margin-left: auto; /* Center the flex container */
-    margin-right: auto; /* Center the flex container */
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
     transition: transform 0.3s ease;
 }
@@ -325,87 +325,87 @@ h1, h2, h3, h4{
 }
 
 .contact-info {
-    flex: 1; /* Take 1 part of the space */
-    color: #00403D; /* Dark text color */
-    padding-right: 50px; /* Space on the right */
+    flex: 1;
+    color: #00403D;
+    padding-right: 50px;
 }
 
 .contact-item {
-    margin-bottom: 20px; /* Space between items */
-    display: flex; /* Use flexbox for icon and text */
-    align-items: center; /* Center align items */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .contact-icon {
-    width: 24px; /* Icon size */
-    height: 24px; /* Icon size */
-    margin-right: 15px; /* Space between icon and text */
+    width: 24px; 
+    height: 24px;
+    margin-right: 15px;
 }
 
 .contact-form {
-    flex: 1; /* Take 1 part of the space */
-    padding-left: 50px; /* Space on the left */
+    flex: 1;
+    padding-left: 50px;  
 }
 
 .contact-form h2 {
-    margin-bottom: 20px; /* Space below the heading */
+    margin-bottom: 20px;
 }
 
 .form-group {
-    margin-bottom: 15px; /* Space between form fields */
+    margin-bottom: 15px;
 }
 
 label {
-    display: block; /* Block display for labels */
-    margin-bottom: 5px; /* Space below labels */
-    color: #00403D; /* Dark text color */
+    display: block;
+    margin-bottom: 5px;
+    color: #00403D;
 }
 
 input, textarea {
-    width: 100%; /* Full width for inputs */
-    padding: 10px; /* Padding for inputs */
-    border: 1px solid #00403D; /* Border for inputs */
-    border-radius: 5px; /* Rounded corners */
+    width: 100%;
+    padding: 10px; 
+    border: 1px solid #00403D;
+    border-radius: 5px;
 }
 
 button {
     font-weight: bold;
     width: 100%;
-    background-color: #00403D; /* Button color */
-    color: white; /* Button text color */
-    padding: 10px 15px; /* Button padding */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Transition for hover effect */
+    background-color: #00403D;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
 }
 
 button:hover {
     background-color: #b3cfcd;
-    color: #00403D; /* Button color on hover */
+    color: #00403D;
 }
 
 .google-map {
     padding-top: 10px;
     color: white;
-    text-align: center; /* Center text */
-    background-color: #00403D; /* Optional: Add a background color to the section */
+    text-align: center;
+    background-color: #00403D;
 }
 
 .map-container {
-    margin-top: 20px; /* Space above the map */
-    width: 100%; /* Make the map container full width */
+    margin-top: 20px;
+    width: 100%;
 }
 
 .map-container iframe {
-    width: 100%; /* Make the iframe take the full width of the container */
-    height: 600px; /* Set a height for the iframe; adjust as needed */
-    border: 0; /* Remove border */
+    width: 100%;
+    height: 600px;
+    border: 0;
 }
 
 /* Footer */
 .footer {
-    background-color: #00403D; /* Dark background */
+    background-color: #00403D;
     color: white;
     text-align: center;
 }
@@ -446,14 +446,14 @@ button:hover {
 }
 
 .footer-menu ul li a {
-    text-decoration: none; /* Remove underline */
-    color: white; /* White text */
+    text-decoration: none;
+    color: white;
     font-size: 15px;
     transition: color 0.3s ease;
 }
 
 .footer-menu ul li a:hover {
-    color: #d9ff00; /* Highlight color on hover */
+    color: #d9ff00;
 }
 
 .footer-contact .social-icons img {
@@ -509,42 +509,42 @@ button:hover {
     }
 
     .contact-detail {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        width: 90%; /* Adjust width for smaller screens */
-        padding: 20px; /* Reduce padding for smaller screens */
+        flex-direction: column;
+        width: 90%;
+        padding: 20px;
     }
 
     .contact-info, .contact-form {
-        width: 100%; /* Full width for contact info and form */
-        padding: 10px; /* Reduce padding */
+        width: 100%;
+        padding: 10px; 
     }
 
     .google-map {
-        padding: 30px 0; /* Reduce padding for map section on smaller screens */
+        padding: 30px 0;
     }
 
     .map-container iframe {
-        height: 300px; /* Reduce height for iframe on smaller screens */
+        height: 300px;
     }
 
     .cards-container {
-        flex-direction: column; /* Stack cards on smaller screens */
-        align-items: center; /* Center cards */
+        flex-direction: column;
+        align-items: center;
     }
 
     .card {
-        width: 90%; /* Full width for better spacing */
+        width: 90%;
     }
 
     .why-choose-us {
-        flex-direction: column; /* Stack items on smaller screens */
-        padding: 30px; /* Adjust padding */
+        flex-direction: column;
+        padding: 30px;
     }
 
     .why-choose-us-text,
     .why-choose-us-image {
-        width: 100%; /* Full width for better spacing */
-        margin-bottom: 20px; /* Add space between items */
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .footer-container {

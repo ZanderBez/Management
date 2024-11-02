@@ -1,6 +1,5 @@
 <?php
-include '../db_connect.php'; // Adjusted the path to point to the correct location
-
+include '../db_connect.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -10,16 +9,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if the passwords match
     if ($password === $confirm_password) {
-        // Hash the password for security
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Insert data into the database
         $sql = "INSERT INTO users (name, email, password, role) VALUES ('$name', '$email', '$hashed_password', '$role')";
 
         if ($conn->query($sql) === TRUE) {
-            // Redirect to signIn.php after successful signup
             header("Location: signIn.php");
-            exit(); // Make sure to stop further script execution after redirection
+            exit();
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -37,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- Link to the CSS file -->
     <link rel="stylesheet" href="../CSS/signUp.css">
 </head>
 <body>
@@ -102,9 +98,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (password !== confirmPassword) {
             alert('Passwords do not match!');
-            return false; // Prevent form submission
+            return false;
         }
-        return true; // Allow form submission if passwords match
+        return true;
     }
     </script>
 </body>

@@ -11,7 +11,6 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Task Management App</title>
-    <!-- Link to External CSS -->
     <link rel="stylesheet" href="../CSS/aboutUs&contactUs.css">
 </head>
 <body>

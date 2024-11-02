@@ -1,10 +1,11 @@
 <?php
 session_start();
-require '../db_connect.php'; // Include the database connection
+require '../db_connect.php';
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    die("Unauthorized access.");
+    echo "Unauthorized access";
+    exit;
 }
 
 // Get the task ID from the form
@@ -16,9 +17,9 @@ $stmt->bind_param("ii", $task_id, $_SESSION['user_id']);
 
 // Execute the statement
 if ($stmt->execute()) {
-    echo "<script>alert('Task marked as completed successfully.'); window.location.href='../Pages/task.php';</script>";
+    echo "Success"; // Return "Success" for the AJAX call
 } else {
-    echo "<script>alert('Error: " . $stmt->error . "'); window.location.href='../Pages/task.php';</script>";
+    echo "Error: " . $stmt->error;
 }
 
 // Close the statement and connection

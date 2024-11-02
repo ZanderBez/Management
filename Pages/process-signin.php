@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../db_connect.php'; // Database connection file
+include '../db_connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
@@ -15,7 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Verify the password
         if (password_verify($password, $user['password'])) {
-            // Set the session variables
             $_SESSION['name'] = $user['name'];
             $_SESSION['email'] = $user['email'];
 

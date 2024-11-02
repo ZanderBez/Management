@@ -7,7 +7,7 @@
 
 html, body {
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
     background-color: transparent;
     color: #333;
 }
@@ -134,8 +134,8 @@ h1, h2, h3, h4{
 
 
 .hero-content {
-    max-width: 50%; /* Ensure the content stays on the left */
-    text-align: left; /* Align text to the left */
+    max-width: 50%;
+    text-align: left;
     padding-left: 15px;
 }
 
@@ -153,7 +153,7 @@ h1, h2, h3, h4{
 .hero-buttons {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align buttons to the left */
+    align-items: flex-start;
     gap: 15px;
 }
 
@@ -400,7 +400,7 @@ tr:nth-child(even) {
 
 .testimonial-cards-wrapper {
     display: flex;
-    max-width: 600px; /* Control the width of the card section */
+    max-width: 600px;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
@@ -409,15 +409,15 @@ tr:nth-child(even) {
     background-color: white;
     border-radius: 10px;
     padding: 40px;
-    min-width: 100%; /* Adjust width for full-screen behavior */
-    max-width: 600px; /* Limit the maximum width */
+    min-width: 100%;
+    max-width: 600px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    display: none; /* Hide all cards by default */
+    display: none;
     transition: all 0.5s ease;
 }
 
 .testimonial-card.active {
-    display: block; /* Show only the active card */
+    display: block;
 }
 
 .testimonial-text {
@@ -428,7 +428,7 @@ tr:nth-child(even) {
 
 .testimonial-stars {
     font-size: 20px;
-    color: #f1c40f; /* Gold color for stars */
+    color: #f1c40f;
     margin-bottom: 10px;
 }
 
@@ -464,7 +464,7 @@ tr:nth-child(even) {
 
 /* Footer */
 .footer {
-    background-color: #00403D; /* Dark background */
+    background-color: #00403D;
     color: white;
     text-align: center;
 }
@@ -505,14 +505,14 @@ tr:nth-child(even) {
 }
 
 .footer-menu ul li a {
-    text-decoration: none; /* Remove underline */
-    color: white; /* White text */
+    text-decoration: none;
+    color: white;
     font-size: 15px;
     transition: color 0.3s ease;
 }
 
 .footer-menu ul li a:hover {
-    color: #d9ff00; /* Highlight color on hover */
+    color: #d9ff00;
 }
 
 .footer-contact .social-icons img {
@@ -575,7 +575,7 @@ tr:nth-child(even) {
     }
 
     .left-arrow, .right-arrow {
-        display: none; /* Hide arrows on smaller screens */
+        display: none;
     }
 
     .testimonial-card {

@@ -1,6 +1,6 @@
 <?php
-session_start(); // Start the session to store user information
-include '../db_connect.php'; // Include the database connection file
+session_start();
+include '../db_connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
@@ -11,25 +11,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // Fetch user datas
         $user = $result->fetch_assoc();
 
         // Verify the hashed password
         if (password_verify($password, $user['password'])) {
-            // Password is correct, create session and redirect to index.php
-            $_SESSION['user_id'] = $user['id']; // Storing user ID in the session
-            $_SESSION['user_name'] = $user['name']; // Storing user name in the session
-            $_SESSION['user_role'] = $user['role']; // Storing user role in the session
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_name'] = $user['name'];
+            $_SESSION['user_role'] = $user['role'];
 
             // Redirect to index.php
             header("Location: ../Pages/index.php");
             exit();
         } else {
-            // Password is incorrect
             echo "Invalid password. Please try again.";
         }
     } else {
-        // Email does not exist
         echo "No account found with that email. Please check your email or sign up.";
     }
 }
@@ -40,12 +36,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In - TaskXpert</title>
-    <!-- Link to the CSS file -->
     <link rel="stylesheet" href="../CSS/signIn.css">
 </head>
 <body>
     <div class="signup-container">
-        <!-- Right Section with Image (now swapped to the right) -->
         <div class="signup-right">
             <img src="../Assets/signIn.png" alt="Sign In Illustration">
         </div>
@@ -57,7 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h2>Log In:</h2>
             </div>
 
-            <!-- Ensure the form submits to itself -->
             <form action="" method="POST" class="signup-form">
                 <div class="form-group">
                     <label for="email">Email</label>

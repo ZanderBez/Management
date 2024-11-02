@@ -7,7 +7,7 @@
 
 html, body {
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
     background-color: transparent;
 }
 
@@ -157,48 +157,149 @@ tr:nth-child(even) {
 
 .action-btn {
     font-weight: bolder;
-    padding: 5px 10px; /* Button padding */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Transition for hover effect */
-    margin-right: 5px; /* Space between buttons */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 5px;
 }
 
 .action-btn:hover {
-    background-color: #003d39; /* Button color on hover */
+    background-color: #003d39;
 }
 
 .complete-btn {
-    background-color: #005a56; /* Green color for complete */
+    background-color: #005a56;
     color: white;
 }s
 
 .complete-btn:hover {
-    background-color: #002725; /* Darker green on hover */
+    background-color: #002725;
     color: white;
 }
 
 .delete-btn {
-    background-color: #da1b0d; /* Red color for delete */
+    background-color: #da1b0d;
     color: white;
 }
 
 .delete-btn:hover {
-    background-color: #8f0200; /* Darker red on hover */
+    background-color: #8f0200;
 }
 
+
 .calendar-section {
-    padding: 40px; /* Adjust padding as needed */
-    background-color: #f4f4f4; /* Optional: Add a background color */
-    border-radius: 10px; /* Optional: Add rounded corners */
-    margin: 30px; /* Optional: Add margin around the section */
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin: 30px;
 }
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #00403D;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 12px;
+    font-family: "Crimson Pro", serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+.modal-content h2 , h3 {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #00403D;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.modal-content p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.modal-content p strong {
+    color: #00403D;
+    font-weight: bold;
+}
+
+.close {
+    color: #00403D;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover, .close:focus {
+    color: #b3cfcd;
+}
+
+.close-modal-btn {
+    background-color: #05413e;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.close-modal-btn:hover {
+    background-color: #b3cfcd;
+    color: #00403D;
+}
+
+.subtask-item {
+    margin-top: 8px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-family: "Crimson Pro", serif;
+}
+
+.subtask-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.subtask-item p strong {
+    color: #00403D;
+    font-weight: bold;
+}
+
+
 
 
 /* Footer */
 .footer {
-    background-color: #00403D; /* Dark background */
+    background-color: #00403D;
     color: white;
     text-align: center;
 }
@@ -239,14 +340,14 @@ tr:nth-child(even) {
 }
 
 .footer-menu ul li a {
-    text-decoration: none; /* Remove underline */
-    color: white; /* White text */
+    text-decoration: none;
+    color: white;
     font-size: 15px;
     transition: color 0.3s ease;
 }
 
 .footer-menu ul li a:hover {
-    color: #d9ff00; /* Highlight color on hover */
+    color: #d9ff00;
 }
 
 .footer-contact .social-icons img {

@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost"; // Your server (most likely localhost)
-$username = "root"; // Default username for phpMyAdmin
-$password = ""; // Leave blank if there's no password
-$dbname = "managment"; // Your database name
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "managment";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

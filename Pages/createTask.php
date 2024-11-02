@@ -11,7 +11,6 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Management App</title>
-    <!-- Link to External CSS -->
     <link rel="stylesheet" href="../CSS/createTask.css">
 </head>
 <body>
@@ -33,7 +32,6 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
             <span class="user-name"><?php echo htmlspecialchars($user_name); ?></span>
             <a href="logout.php" class="logout-btn">Logout</a>
         <?php else: ?>
-            <!-- If not logged in, show Get Started button -->
             <a href="signUp.php" class="cta-btn">Get Started</a>
         <?php endif; ?>
     </div>
@@ -56,7 +54,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 <section class="task-creation">
     <h2>Create a New Task</h2>
     <div class="form-container">
-    <form id="task-form" method="POST"> <!-- Remove action and use id -->
+    <form id="task-form" method="POST">
     <div class="form-row">
         <div class="form-group">
             <label for="task-title">Task Title</label>
@@ -95,7 +93,17 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
             <textarea name="description" id="description" rows="4" placeholder="Enter task description" required></textarea>
         </div>
     </div>
-    <button type="submit">Create Task</button>
+     <!-- Subtask Fields -->
+     <div class="subtask-container">
+            <h3>Subtasks</h3>
+            <div class="subtask-row">
+                <input type="text" name="subtask_title[]" placeholder="Subtask Title" required>
+                <input type="text" name="subtask_description[]" placeholder="Subtask Description" required>
+            </div> 
+        </div>
+        <button type="button" id="add-subtask">Add Another Subtask</button>
+        
+        <button type="submit">Create Task</button>
 </form>
 
     </div>
@@ -137,22 +145,37 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 <script>
     $(document).ready(function() {
         $('#task-form').on('submit', function(e) {
-            e.preventDefault(); // Prevent the default form submission
+            e.preventDefault();
+
+            // Serialize the form data, including subtasks
+            const formData = $(this).serialize();
 
             $.ajax({
                 type: 'POST',
-                url: '../submitTask.php', // Adjust the URL as needed
-                data: $(this).serialize(), // Serialize form data
+                url: '../Events/submitTask.php',
+                data: formData,
                 success: function(response) {
-                    alert(response); // Show the response in an alert
-                    $('#task-form')[0].reset(); // Reset the form fields
+                    alert(response);
+                    $('#task-form')[0].reset(); // Reset the form after successful submission
                 },
                 error: function() {
                     alert('Error submitting the task.');
                 }
             });
         });
+
+        // Add functionality to add more subtasks
+        $('#add-subtask').on('click', function() {
+            const subtaskContainer = $('.subtask-container');
+            const newSubtaskRow = $('<div class="subtask-row">');
+            newSubtaskRow.html(`
+                <input type="text" name="subtask_title[]" placeholder="Subtask Title" required>
+                <input type="text" name="subtask_description[]" placeholder="Subtask Description" required>
+            `);
+            subtaskContainer.append(newSubtaskRow);
+        });
     });
 </script>
+
 </body>
 </html>
