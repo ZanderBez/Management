@@ -187,6 +187,11 @@ I would like to express my gratitude to my lecturer, [Tsungai Katsuro](https://g
 
 ## Demo Video
 [Demo Video](https://github.com/ZanderBez)
+
+## MERN Application Development Progress
+
+## Open Brief Proposal
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
