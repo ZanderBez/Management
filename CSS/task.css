@@ -12,11 +12,11 @@ html, body {
 }
 
 p {
-    font-family: "Crimson Pro", serif; 
+    font-family: "Inter", sans-serif;
 }
 
 h1, h2, h3, h4 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
 }
 
 /* Navbar */
@@ -42,7 +42,7 @@ h1, h2, h3, h4 {
 }
 
 .nav-center a {
-    font-family: "Crimson Pro", serif;
+    font-family: "Hanken Grotesk", sans-serif;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -68,14 +68,14 @@ h1, h2, h3, h4 {
 }
 
 .user-name {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
     color: white;
     font-weight: bold;
     margin-right: 20px;
 }
 
 .logout-btn, .cta-btn {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
     background-color: #d9ff00;
     color: #00403D;
     padding: 10px 15px;
@@ -89,6 +89,8 @@ h1, h2, h3, h4 {
 .logout-btn:hover {
     background-color: #b3cfcd;
     color: #00403D;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Hamburger Menu */
@@ -221,14 +223,14 @@ tr:nth-child(even) {
     width: 80%;
     max-width: 500px;
     border-radius: 12px;
-    font-family: "Crimson Pro", serif;
+    font-family: "Inter", sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #333;
 }
 
 .modal-content h2, h3 {
     text-align: center;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
     color: #00403D;
     margin-bottom: 15px;
     font-size: 24px;
@@ -240,7 +242,7 @@ tr:nth-child(even) {
     border: none;
     padding: 12px 24px;
     border-radius: 8px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
     font-weight: bold;
     cursor: pointer;
     margin-top: 20px;

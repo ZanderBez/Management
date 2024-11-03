@@ -8,17 +8,16 @@
 html, body {
     width: 100%;
     overflow-x: hidden; 
-    font-family: 'Arial', sans-serif;
     background-color: transparent;
     color: #333;
 }
 
 p{
-    font-family: "Crimson Pro", serif; 
+    font-family: "Inter", sans-serif; 
 }
 
 h1, h2, h3, h4{
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
 }
 
 /* Navbar */
@@ -44,7 +43,7 @@ h1, h2, h3, h4{
 }
 
 .nav-center a {
-    font-family: "Crimson Pro", serif;
+    font-family: "Hanken Grotesk", sans-serif;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -54,14 +53,14 @@ h1, h2, h3, h4{
 }
 
 .nav-center a.active {
-    color: #d9ff00; /* Example highlight color */
+    color: #d9ff00;
     font-weight: bold;
-    border-bottom: 2px solid #d9ff00; /* Optional underline */
+    border-bottom: 2px solid #d9ff00;
 }
 
 .nav-center a:hover {
-    color: #d9ff00; /* Changes color on hover */
-    transform: scale(1.1); /* Slightly enlarges the text */
+    color: #d9ff00;
+    transform: scale(1.1);
 }
 
 .nav-right {
@@ -98,11 +97,15 @@ h1, h2, h3, h4{
 .cta-btn:hover{
     background-color: #b3cfcd;
     color: #00403D;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .logout-btn:hover {
     background-color: #b3cfcd;
     color: #00403D;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Hamburger Menu */
@@ -149,7 +152,7 @@ h1, h2, h3, h4{
 
 
 .about-text h1 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
     margin-bottom: 50px;
     font-size: 36px;
 }
@@ -162,6 +165,19 @@ h1, h2, h3, h4{
 .about-image img {
     max-width: 100%;
     height: auto;
+    transform: scale(1.5);
+    animation: fadeInZoom 2s ease-out forwards;
+}
+
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* End at normal scale */
+    }
 }
 
 /* Mission and Vision Section */
@@ -589,7 +605,28 @@ button:hover {
         text-align: center;
     }
 
-    .mission-vision {
-        flex-direction: column;
+
+   .mission-vision {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    background: none; 
+    }
+
+
+    .mission-image, .vision-image {
+        display: none;
+    }
+
+
+    .mission, .vision {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .mission-box, .vision-box {
+        max-width: 100%; 
+        padding: 20px;
     }
 }

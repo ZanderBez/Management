@@ -12,12 +12,12 @@ html, body {
     color: #333;
 }
 
-p{
-    font-family: "Crimson Pro", serif; 
+p {
+    font-family: "Inter", sans-serif;
 }
 
-h1, h2, h3, h4{
-    font-family: "Montserrat", sans-serif;
+h1, h2, h3, h4 {
+    font-family: "Hanken Grotesk", sans-serif;
 }
 
 /* Navbar */
@@ -43,7 +43,7 @@ h1, h2, h3, h4{
 }
 
 .nav-center a {
-    font-family: "Crimson Pro", serif;
+    font-family: "Hanken Grotesk", sans-serif;
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -53,14 +53,14 @@ h1, h2, h3, h4{
 }
 
 .nav-center a.active {
-    color: #d9ff00; /* Example highlight color */
+    color: #d9ff00;
     font-weight: bold;
-    border-bottom: 2px solid #d9ff00; /* Optional underline */
+    border-bottom: 2px solid #d9ff00;
 }
 
 .nav-center a:hover {
-    color: #d9ff00; /* Changes color on hover */
-    transform: scale(1.1); /* Slightly enlarges the text */
+    color: #d9ff00;
+    transform: scale(1.1);
 }
 
 .nav-right {
@@ -69,14 +69,14 @@ h1, h2, h3, h4{
 }
 
 .user-name {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
     color: white;
     font-weight: bold;
     margin-right: 20px;
 }
 
 .logout-btn {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
     background-color: #d9ff00;
     color: #00403D;
     padding: 10px 15px;
@@ -86,7 +86,7 @@ h1, h2, h3, h4{
     transition: background-color 0.3s ease;
 }
 .cta-btn{
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
     background-color: #d9ff00;
     color: #00403D;
     padding: 10px 15px;
@@ -99,12 +99,17 @@ h1, h2, h3, h4{
 .cta-btn:hover{
     background-color: #b3cfcd;
     color: #00403D;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 
 .logout-btn:hover {
     background-color: #b3cfcd;
     color: #00403D;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    
 }
 
 /* Hamburger Menu */
@@ -148,7 +153,7 @@ h1, h2, h3, h4{
 }
 
 .hero-content h1 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
     font-size: 36px;
     margin-bottom: 50px;
 }
@@ -167,7 +172,7 @@ h1, h2, h3, h4{
 
 .hero-buttons .btn-primary,
 .hero-buttons .btn-secondary {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
     padding: 12px 30px;
     border-radius: 5px;
     font-weight: bold;
@@ -190,6 +195,8 @@ h1, h2, h3, h4{
 .hero-buttons .btn-secondary:hover {
     background-color: #b3cfcd;
     color: #00403D;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .hero-image img {
@@ -198,6 +205,20 @@ h1, h2, h3, h4{
     height: auto;
     object-fit: contain;
     display: block;
+    opacity: 0;
+    transform: scale(1.5);
+    animation: fadeInZoom 2s ease-out forwards;
+}
+
+@keyframes fadeInZoom {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* End at normal scale */
+    }
 }
 
 /* Service Cards */
@@ -284,8 +305,8 @@ h1, h2, h3, h4{
 }
 
 .row-late {
-    background-color: #ffcccc; /* Light red background */
-    color: red; /* Text color */
+    background-color: #ffcccc;
+    color: red;
     font-weight: bold;
 }
 
@@ -324,7 +345,7 @@ tr:nth-child(even) {
     align-items: center;
     justify-content: space-between;
     max-width: 1590px;
-    height: 50vh;
+    height: 53vh;
     margin: 0 auto;
 }
 
@@ -369,7 +390,7 @@ tr:nth-child(even) {
 }
 
 .read-more-btn {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Hanken Grotesk", sans-serif;
     padding: 12px 30px;
     background-color: #d9ff00;
     color: #00403D;
@@ -381,6 +402,8 @@ tr:nth-child(even) {
 .read-more-btn:hover {
     background-color: #b3cfcd;
     color: #00403D;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Testimonial Section */
@@ -549,8 +572,6 @@ tr:nth-child(even) {
 /* Responsive Media Queries */
 
 @media (max-width: 768px) {
-    /* Hero Section */
-
     .hero {
         flex-direction: column;
         text-align: center;
@@ -567,6 +588,22 @@ tr:nth-child(even) {
         align-items: center;
     }
 
+    /* Hide the hero image on smaller screens */
+    .hero-image {
+        display: none;
+    }
+
+    .why-us-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Hide the Why Us image on smaller screens */
+    .why-us-image {
+        display: none;
+    }
+
+    /* Other responsive styles */
     .services {
         flex-direction: column;
         gap: 40px;
@@ -637,8 +674,8 @@ tr:nth-child(even) {
     .footer-contact {
         text-align: center;
     }
-    
 }
+
 
 @media (min-width: 768px) {
 

@@ -11,6 +11,9 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Task Management App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/aboutUs&contactUs.css">
 </head>
 <body>
@@ -204,9 +207,9 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 
     // Function to trigger the animation when the stats section is visible
     function startCounting() {
-        animateCounter('active-users', 0, 6000, 2000);
-        animateCounter('awarded-patents', 0, 150, 2000);
-        animateCounter('employees', 0, 500, 2000);
+        animateCounter('active-users', 0, 5486, 2000);
+        animateCounter('awarded-patents', 0, 127, 2000);
+        animateCounter('employees', 0, 623, 2000);
     }
 
     // Check if the stats section is in the viewport
