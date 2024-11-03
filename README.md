@@ -189,10 +189,10 @@ I would like to express my gratitude to my lecturer, [Tsungai Katsuro](https://g
 [Demo Video](https://github.com/ZanderBez)
 
 ## MERN Application Development Progress
-[MERN Application Development Progress Check.pdf](https://github.com/user-attachments/files/17611730/MERN.Application.Development.Progress.Check.pdf)
+[MERN Application Development Progress Check](https://docs.google.com/document/d/1Mw2lE6nlyJdqrWx571rrWy_3HNGt5-Z85uFAPTMAX6k/edit?usp=sharing)
 
 ## Open Brief Proposal
-[Open Brief Proposal.pdf](https://github.com/user-attachments/files/17611737/Open.Brief.Proposal.pdf)
+[Open Brief Proposal](https://docs.google.com/document/d/1GBrl1ytn0SXZCa9-w9S2yb_qJW4M0cPhj6W-EmqYmvw/edit?usp=sharing)
 
 ## License
 
