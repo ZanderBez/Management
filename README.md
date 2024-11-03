@@ -102,25 +102,25 @@ TaskXpert is a task management web application that allows users to create, view
 ## MockUps
 
 ### Sign Up Page
-![SignUpMock Screenshot](assets/signUpMock.png "SignUpMock Screenshot")
+![SignUpMock Screenshot](./Assets/LogUp_MockUp.png "SignUpMock Screenshot")
 
 ### Log In Page
-![LogInMock Screenshot](assets/logInMock.png "LogInMock Screenshot")
+![LogInMock Screenshot](./Assets/LogIn_mockUp.png "LogInMock Screenshot")
 
 ### Home Page 
-![HomePageMock Screenshot](assets/indexMock.png "HomePageMock Screenshot")
+![HomePageMock Screenshot](./Assets/HomePageMockUp.png "HomePageMock Screenshot")
 
 ### Task Page 
-![TaskPageMock Screenshot](assets/taskMock.png "TaskPageMock Screenshot")
+![TaskPageMock Screenshot](./Assets/TaskPage_mockUp.png "TaskPageMock Screenshot")
 
 ### Create Task Page 
-![CreateTaskMock Screenshot](assets/createTaskMock.png "CreateTaskMock Screenshot")
+![CreateTaskMock Screenshot](./Assets/CreateTask_MockUp.png "CreateTaskMock Screenshot")
 
 ### About Us Page
-![AboutUsMock Screenshot](assets/aboutUsMock.png "AboutUsMock Screenshot")
+![AboutUsMock Screenshot](./Assets/AboutUs_mockUp.png "AboutUsMock Screenshot")
 
 ### Contact Us Page
-![ContactUsMock Screenshot](assets/contactUsMock.png "ContactUsMock Screenshot")
+![ContactUsMock Screenshot](./Assets/ContactUs_MockUp.png "ContactUsMock Screenshot")
 
 ### User Roles
 
@@ -163,6 +163,12 @@ Management/
 - **users**: Stores user information (id, name, email, role, password).
 - **tasks**: Stores tasks data (task_id, user_id, title, description, due date, status).
 - **subtasks**: Stores subtasks data (task_id, title, description, status).
+
+### ER Diagram
+
+Below is a simplified Entity-Relationship (ER) diagram illustrating the relationships between the **users**, **tasks**, and **subtasks** tables:
+
+![ER Diagram](./Assets/ER%20Diagram.png "ER Diagram")
 
 ## Technologies Used
 

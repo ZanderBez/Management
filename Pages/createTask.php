@@ -131,9 +131,9 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
             <p>+27 98 678 463</p>
             <p>info@TaskXpert.co.za</p>
             <div class="social-icons">
-                <a href="#"><img src="../Assets/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="../Assets/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="../Assets/twitter.png" alt="Twitter"></a>
+                <a href="https://www.instagram.com/openwindowinstitute/?hl=en"><img src="../Assets/instagram.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/OWIstudentlife/"><img src="../Assets/facebook.png" alt="Facebook"></a>
+                <a href="https://x.com/open_window_?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="../Assets/twitter.png" alt="Twitter"></a>
             </div>
         </div>
     </div>
