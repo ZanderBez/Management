@@ -44,16 +44,24 @@ h1, h2, h3, h4{
 }
 
 .nav-center a {
-    font-family: "Crimson Pro", serif; 
+    font-family: "Crimson Pro", serif;
     color: white;
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-center a.active {
+    color: #d9ff00; /* Example highlight color */
+    font-weight: bold;
+    border-bottom: 2px solid #d9ff00; /* Optional underline */
 }
 
 .nav-center a:hover {
-    color: #d9ff00;
+    color: #d9ff00; /* Changes color on hover */
+    transform: scale(1.1); /* Slightly enlarges the text */
 }
 
 .nav-right {
@@ -97,8 +105,31 @@ h1, h2, h3, h4{
     color: #00403D;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+.hamburger span:last-child {
+    margin-bottom: 0;
+}
+
 /* About Us Section */
 .about-us {
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,19 +142,16 @@ h1, h2, h3, h4{
     flex: 1;
 }
 
-.about-text h3 {
-    font-size: 32px;
-    color: white;
-}
-
-.about-text h2 {
-    font-size: 36px;
-    color: white;
-}
-
 .about-text p {
-    font-size: 16px;
-    color: white;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+
+.about-text h1 {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 50px;
+    font-size: 36px;
 }
 
 .about-image {
@@ -489,6 +517,9 @@ button:hover {
         flex-direction: column;
         gap: 10px;
         margin-top: 20px;
+    }
+    .nav-center.active {
+        display: flex;
     }
 
     .nav-center.open {

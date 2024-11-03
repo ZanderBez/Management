@@ -43,16 +43,24 @@ h1, h2, h3, h4{
 }
 
 .nav-center a {
-    font-family: "Crimson Pro", serif; 
+    font-family: "Crimson Pro", serif;
     color: white;
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-center a.active {
+    color: #d9ff00; /* Example highlight color */
+    font-weight: bold;
+    border-bottom: 2px solid #d9ff00; /* Optional underline */
 }
 
 .nav-center a:hover {
-    color: #d9ff00;
+    color: #d9ff00; /* Changes color on hover */
+    transform: scale(1.1); /* Slightly enlarges the text */
 }
 
 .nav-right {
@@ -273,6 +281,12 @@ h1, h2, h3, h4{
 
 .task-list h2 {
     margin-bottom: 10px;
+}
+
+.row-late {
+    background-color: #ffcccc; /* Light red background */
+    color: red; /* Text color */
+    font-weight: bold;
 }
 
 table {
@@ -591,6 +605,9 @@ tr:nth-child(even) {
         flex-direction: column;
         gap: 10px;
         margin-top: 20px;
+    }
+    .nav-center.active {
+        display: flex;
     }
 
     .nav-center.open {

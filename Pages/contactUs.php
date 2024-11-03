@@ -25,7 +25,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
         <a href="task.php">Task</a>
         <a href="createTask.php">Create Task</a>
         <a href="aboutUs.php">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="contactUs.php" class="active">Contact Us</a>
     </div>
     <div class="nav-right">
         <?php if ($is_logged_in): ?>
@@ -56,6 +56,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
         <h1>Get in touch</h1>
         <br>
         <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <br>
         
         <div class="contact-item">
             <img src="../Assets/office.png" alt="Location Icon" class="contact-icon">
@@ -129,8 +130,8 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
             <h3>Quick Menu</h3>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#">Task</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="task.php">Task</a></li>
+                <li><a href="contactUs>php">Contact Us</a></li>
             </ul>
         </div>
 
@@ -153,8 +154,8 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 
 <script>
     document.getElementById('hamburger-menu').addEventListener('click', function() {
-        const navbar = document.querySelector('.navbar');
-        navbar.classList.toggle('open');
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
     });
 </script>
 

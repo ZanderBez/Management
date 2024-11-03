@@ -22,7 +22,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
     <div class="nav-center" id="nav-links">
         <a href="index.php">Home</a>
         <a href="task.php">Task</a>
-        <a href="#">Create Task</a>
+        <a href="createTask.php" class="active">Create Task</a>
         <a href="aboutUs.php">About us</a>
         <a href="contactUs.php">Contact us</a>
     </div>
@@ -44,9 +44,8 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 
 <section class="create-task">
     <div class="task-text">
-        <h3>Create a task</h3>
-        <h2>We're Here to Help You</h2>
-        <p>If you have any questions or inquiries, feel free to reach out to us. We're always happy to assist you!</p>
+        <h3>Get Started with Your New Task</h3>
+        <p>Define and Organize Your Work Here</p>
     </div>
 </section>
 
@@ -118,7 +117,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
         <div class="footer-menu">
             <h3>Quick Menu</h3>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="aboutUs.php">About Us</a></li>
                 <li><a href="contactUs.php">Contact Us</a></li>
             </ul>
@@ -143,6 +142,10 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+    document.getElementById('hamburger-menu').addEventListener('click', function() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+    });
     $(document).ready(function() {
         $('#task-form').on('submit', function(e) {
             e.preventDefault();

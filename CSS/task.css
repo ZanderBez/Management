@@ -11,11 +11,11 @@ html, body {
     background-color: transparent;
 }
 
-p{
+p {
     font-family: "Crimson Pro", serif; 
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4 {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -42,16 +42,24 @@ h1, h2, h3, h4{
 }
 
 .nav-center a {
-    font-family: "Crimson Pro", serif; 
+    font-family: "Crimson Pro", serif;
     color: white;
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-center a.active {
+    color: #d9ff00;
+    font-weight: bold;
+    border-bottom: 2px solid #d9ff00;
 }
 
 .nav-center a:hover {
-    color: #d9ff00;
+    color: #d9ff00; /* Changes color on hover */
+    transform: scale(1.1); /* Slightly enlarges the text */
 }
 
 .nav-right {
@@ -66,17 +74,7 @@ h1, h2, h3, h4{
     margin-right: 20px;
 }
 
-.logout-btn {
-    font-family: "Montserrat", sans-serif;
-    background-color: #d9ff00;
-    color: #00403D;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-.cta-btn{
+.logout-btn, .cta-btn {
     font-family: "Montserrat", sans-serif;
     background-color: #d9ff00;
     color: #00403D;
@@ -87,17 +85,11 @@ h1, h2, h3, h4{
     transition: background-color 0.3s ease;
 }
 
-.cta-btn:hover{
-    background-color: #b3cfcd;
-    color: #00403D;
-}
-
-
+.cta-btn:hover,
 .logout-btn:hover {
     background-color: #b3cfcd;
     color: #00403D;
 }
-
 
 /* Hamburger Menu */
 .hamburger {
@@ -121,6 +113,7 @@ h1, h2, h3, h4{
     margin-bottom: 0;
 }
 
+/* Task List Section */
 .task-list {
     margin: 20px;
     padding: 20px;
@@ -130,11 +123,14 @@ h1, h2, h3, h4{
 
 .task-list h2 {
     margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    overflow-x: auto;
 }
 
 table, th, td {
@@ -156,27 +152,23 @@ tr:nth-child(even) {
 }
 
 .action-btn {
-    font-weight: bolder;
-    padding: 5px 10px;
     border: none;
+    width: 80px;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    margin-right: 5px;
-}
-
-.action-btn:hover {
-    background-color: #003d39;
+    transition: background-color 0.3s ease;
 }
 
 .complete-btn {
     background-color: #005a56;
     color: white;
-}s
+}
 
 .complete-btn:hover {
     background-color: #002725;
-    color: white;
 }
 
 .delete-btn {
@@ -188,12 +180,23 @@ tr:nth-child(even) {
     background-color: #8f0200;
 }
 
+/* Late Task Styling */
+.task-late {
+    color: red;
+    font-weight: bold;
+}
 
+/* Calendar Section */
 .calendar-section {
-    padding: 40px;
+    padding: 20px;
     background-color: #f4f4f4;
     border-radius: 10px;
-    margin: 30px;
+    margin: 20px;
+}
+
+#calendar {
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 /* Modal Styles */
@@ -223,35 +226,12 @@ tr:nth-child(even) {
     color: #333;
 }
 
-.modal-content h2 , h3 {
+.modal-content h2, h3 {
     text-align: center;
     font-family: "Montserrat", sans-serif;
     color: #00403D;
     margin-bottom: 15px;
     font-size: 24px;
-}
-
-.modal-content p {
-    margin: 8px 0;
-    font-size: 16px;
-}
-
-.modal-content p strong {
-    color: #00403D;
-    font-weight: bold;
-}
-
-.close {
-    color: #00403D;
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.close:hover, .close:focus {
-    color: #b3cfcd;
 }
 
 .close-modal-btn {
@@ -263,39 +243,9 @@ tr:nth-child(even) {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: inline-block;
     margin-top: 20px;
-    text-align: center;
+    display: inline-block;
 }
-
-.close-modal-btn:hover {
-    background-color: #b3cfcd;
-    color: #00403D;
-}
-
-.subtask-item {
-    margin-top: 8px;
-    background-color: #f4f4f4;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    font-family: "Crimson Pro", serif;
-}
-
-.subtask-item p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-
-.subtask-item p strong {
-    color: #00403D;
-    font-weight: bold;
-}
-
-
-
 
 /* Footer */
 .footer {
@@ -305,7 +255,6 @@ tr:nth-child(even) {
 }
 
 .footer-container {
-    
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -320,6 +269,7 @@ tr:nth-child(even) {
 }
 
 .footer-logo img {
+    height: auto;
     width: 100%;
     max-width: 250px;
 }
@@ -330,6 +280,12 @@ tr:nth-child(even) {
     padding: 20px;
     flex: 1;
     text-align: left;
+}
+
+.footer-menu h3,
+.footer-contact h3 {
+    color: white;
+    margin-top: 5px;
 }
 
 .footer-menu ul,
@@ -354,6 +310,7 @@ tr:nth-child(even) {
     margin-top: 20px;
     width: 24px;
 }
+
 .footer-bottom {
     font-weight: bolder;
     font-style: italic;
@@ -366,8 +323,8 @@ tr:nth-child(even) {
     text-align: center; 
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
-
     .navbar {
         flex-direction: column;
         padding: 10px;
@@ -378,6 +335,9 @@ tr:nth-child(even) {
         flex-direction: column;
         gap: 10px;
         margin-top: 20px;
+    }
+    .nav-center.active {
+        display: flex;
     }
 
     .nav-center.open {
@@ -397,6 +357,29 @@ tr:nth-child(even) {
         margin: 5px;
     }
 
+    /* Task List Table - Mobile View */
+    .task-list table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .task-list table th,
+    .task-list table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    /* Calendar Adjustments */
+    .calendar-section #calendar {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    .fc-toolbar h2 {
+        font-size: 18px;
+    }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
@@ -407,6 +390,4 @@ tr:nth-child(even) {
     .footer-contact {
         text-align: center;
     }
-
-
 }

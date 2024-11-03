@@ -24,7 +24,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
         <a href="index.php">Home</a>
         <a href="task.php">Task</a>
         <a href="createTask.php">Create Task</a>
-        <a href="#">About Us</a>
+        <a href="aboutUs.php" class="active">About Us</a>
         <a href="contactUs.php">Contact Us</a>
     </div>
     <div class="nav-right">
@@ -45,8 +45,8 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 <!-- About Us Section -->
 <section class="about-us">
     <div class="about-text">
-        <h3>ABOUT US</h3>
-        <h2>Leading the way in task management intelligence</h2>
+        <p>About Us</p>
+        <h1>Leading the way in task management intelligence</h1>
         <p>We believe what’s good for businesses is good for society. TaskXpert is here to build trust and demonstrate impact.</p>
     </div>
     <div class="about-image">
@@ -143,7 +143,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
         
         <div class="mission-text">
             <h3>OUR MISSION</h3>
-            <p>We strive to empower teams and individuals with the tools they need to effectively manage their tasks and projects, fostering productivity and success.</p>
+            <p>Our mission is to simplify task management and boost productivity by delivering intuitive, reliable, and effective tools that empower individuals and teams to stay organized, meet their goals, and unlock their full potential.</p>
         </div>
     </div>
 </section>
@@ -158,7 +158,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
             <h3>Quick Menu</h3>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="aboutUs.php">About Us</a></li>
                 <li><a href="contactUs.php">Contact Us</a></li>
             </ul>
         </div>
@@ -182,8 +182,8 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : 'Guest';
 
 <script>
     document.getElementById('hamburger-menu').addEventListener('click', function() {
-        const navbar = document.querySelector('.navbar');
-        navbar.classList.toggle('open');
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
     });
      // Function to animate the counting effect
      function animateCounter(id, start, end, duration) {

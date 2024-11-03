@@ -38,7 +38,7 @@ if ($user_id) {
         <img src="../Assets/Navlogo.png" alt="TaskManager Logo" class="logo">
     </div>
     <div class="nav-center" id="nav-links">
-        <a href="#">Home</a>
+        <a href="index.php" class="active">Home</a>
         <a href="task.php">Task</a>
         <a href="createTask.php">Create Task</a>
         <a href="aboutUs.php">About us</a>
@@ -115,11 +115,11 @@ if ($user_id) {
         <tbody>
             <?php if (count($tasks) > 0): ?>
                 <?php foreach ($tasks as $task): ?>
-                    <tr>
+                    <tr class="<?php echo $task['status'] === 'Late' ? 'row-late' : ''; ?>">
                         <td><?php echo htmlspecialchars($task['title']); ?></td>
                         <td><?php echo htmlspecialchars($task['description']); ?></td>
                         <td><?php echo htmlspecialchars($task['date']); ?></td>
-                        <td><?php echo htmlspecialchars($task['status']); ?></td>
+                        <td><?php echo htmlspecialchars($task['status'] ?: 'Pending'); ?></td>
                     </tr>
                 <?php endforeach; ?>
             <?php else: ?>
@@ -130,6 +130,8 @@ if ($user_id) {
         </tbody>
     </table>
 </section>
+
+
 
 <section class="why-us-section">
     <div class="why-us-container">
@@ -201,7 +203,7 @@ if ($user_id) {
         <div class="footer-menu">
             <h3>Quick Menu</h3>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="aboutUs.php">About Us</a></li>
                 <li><a href="contactUs.php">Contact Us</a></li>
             </ul>
@@ -226,8 +228,8 @@ if ($user_id) {
 
 <script>
     document.getElementById('hamburger-menu').addEventListener('click', function() {
-        const navbar = document.querySelector('.navbar');
-        navbar.classList.toggle('open');
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
     });
 
     function animateValue(id, start, end, duration) {
@@ -252,7 +254,7 @@ if ($user_id) {
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateValue("customer-count", 0, 10000, 1000);
+                    animateValue("customer-count", 0, 9983, 1000);
                     observer.unobserve(customerSection);
                 }
             });
