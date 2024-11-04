@@ -14,11 +14,14 @@ TaskXpert is a task management web application that allows users to create, view
 6. [Usage](#usage)
 7. [Folder Structure](#folder-structure)
 8. [Database Structure](#database-structure)
+   - [ER Diagram](#er-diagram)
 9. [Technologies Used](#technologies-used)
 10. [Contributing](#contributing)
 11. [Demo Video](#demo-video)
-12. [License](#license)
-13. [Contact](#contact)
+12. [CRUD Application Development Progress](#crud-application-development-progress)
+13. [Open Brief Proposal](#open-brief-proposal)
+14. [License](#license)
+15. [Contact](#contact)
 
 ## Built With 
 
@@ -186,10 +189,10 @@ Below is a simplified Entity-Relationship (ER) diagram illustrating the relation
 I would like to express my gratitude to my lecturer, [Tsungai Katsuro](https://github.com/TsungaiKats), for his guidance and support throughout this year.
 
 ## Demo Video
-[Demo Video](https://github.com/ZanderBez)
+[Demo Video](https://drive.google.com/file/d/1-Jl8o1mKKxr5218T8819GHztr8hm_4hb/view?usp=sharing)
 
-## MERN Application Development Progress
-[MERN Application Development Progress Check](https://docs.google.com/document/d/1Mw2lE6nlyJdqrWx571rrWy_3HNGt5-Z85uFAPTMAX6k/edit?usp=sharing)
+## CRUD Application Development Progress
+[CRUD Application Development Progress Check](https://docs.google.com/document/d/1Mw2lE6nlyJdqrWx571rrWy_3HNGt5-Z85uFAPTMAX6k/edit?usp=sharing)
 
 ## Open Brief Proposal
 [Open Brief Proposal](https://docs.google.com/document/d/1GBrl1ytn0SXZCa9-w9S2yb_qJW4M0cPhj6W-EmqYmvw/edit?usp=sharing)
