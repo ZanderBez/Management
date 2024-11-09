@@ -1,6 +1,4 @@
-<!-- Repository Information & Links-->
 <br />
-
 <p align="center">
   <img src="https://img.shields.io/github/repo-size/ZanderBez/Management?color=%000000" alt="GitHub repo size">
   <img src="https://img.shields.io/github/watchers/ZanderBez/Management?color=%000000" alt="GitHub watchers">
@@ -8,7 +6,7 @@
   <img src="https://img.shields.io/github/languages/code-size/ZanderBez/Management?color=%000000" alt="GitHub code size in bytes">
 </p>
 
-<!-- HEADER SECTION -->
+
 <h5 align="center" style="padding:0;margin:0;">Zander Bezuidenhout</h5>
 <h5 align="center" style="padding:0;margin:0;">Student Number: 221205</h5>
 <h6 align="center">DV 200</h6>
@@ -34,7 +32,7 @@
   <a href="https://github.com/ZanderBez/Management/issues">Request Feature</a>
 </p>
 
-<!-- TABLE OF CONTENTS -->
+
 ## Table of Contents
 
 * [About the Project](#about-the-project)
@@ -67,9 +65,9 @@
 * [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
-<!--PROJECT DESCRIPTION-->
+
 ## About the Project
-<!-- header image of project -->
+
 ![TaskXpert Logo](./Assets/HomePageMockUp.png)
 
 ### Project Description
@@ -85,7 +83,7 @@ TaskXpert is a task management web application that allows users to create, view
 [![Javascript](https://img.shields.io/badge/Javascript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://www.javascript.com/)
 [![xampp](https://img.shields.io/badge/xampp-750000?style=for-the-badge&logo=xampp&logoColor=#FB7A24)](https://www.apachefriends.org/index.html)
 
-<!-- GETTING STARTED -->
+
 ## Getting Started
 
 The following instructions will help you set up your copy of the project for development and testing purposes.
@@ -124,7 +122,7 @@ The following instructions will help you set up your copy of the project for dev
 6. **Access the Application**:
     - Navigate to `http://localhost/Management/Pages/signIn.php` in your browser.
 
-<!-- FEATURES AND FUNCTIONALITY -->
+
 ## Features and Functionality
 
 ### Core Features
@@ -135,7 +133,7 @@ The following instructions will help you set up your copy of the project for dev
 - **Responsive Design**: Optimized for mobile and desktop.
 - **Real-Time Collaboration**: Real-time task updates.
 
-<!-- CONCEPT PROCESS -->
+
 ## Concept Process
 
 The project was conceptualized to provide a clear and organized way to manage tasks, especially for environments where roles and permissions are key.
@@ -156,9 +154,9 @@ Initial brainstorming focused on making task management simple and efficient for
 
 ### User-flow
 
-Outlined user flows for both bosses and workers to ensure seamless task creation and management.
+![User Flow](./Assets//User%20Flow%20Managemnet.png)
 
-<!-- DEVELOPMENT PROCESS -->
+
 ## Development Process
 
 ### Implementation Process
@@ -185,7 +183,7 @@ Feedback highlighted the clear role division and user-friendly UI. Suggested add
 
 Basic testing was done to ensure smooth authentication and task creation. Future improvements include more comprehensive database interaction tests.
 
-<!-- FUTURE IMPLEMENTATION -->
+
 ### Future Implementation
 
 * Add a notification system for task deadlines.
@@ -194,7 +192,7 @@ Basic testing was done to ensure smooth authentication and task creation. Future
 * Enhance security with two-factor authentication.
 * Integrate a chat feature for better team communication.
 
-<!-- FINAL OUTCOME -->
+
 ## Final Outcome
 
 ### Mockups
@@ -214,12 +212,12 @@ Basic testing was done to ensure smooth authentication and task creation. Future
 
 [View Demonstration](https://drive.google.com/file/d/1-Jl8o1mKKxr5218T8819GHztr8hm_4hb/view?usp=sharing)
 
-<!-- ROADMAP -->
+
 ## Roadmap
 
 See the [open issues](https://github.com/ZanderBez/Management/issues) for a list of proposed features and known issues.
 
-<!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions make the open-source community such a fantastic place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -230,23 +228,23 @@ Contributions make the open-source community such a fantastic place to learn, in
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<!-- AUTHORS -->
+
 ## Authors
 
 * **Zander Bezuidenhout** - [ZanderBez](https://github.com/ZanderBez)
 
-<!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-<!-- CONTACT -->
+
 ## Contact
 
 * **Zander Bezuidenhout** - [bezuidenhoutzander8@gmail.com](mailto:bezuidenhoutzander8@gmail.com)
 * **Project Link** - [TaskXpert](https://github.com/ZanderBez/Management)
 
-<!-- ACKNOWLEDGEMENTS -->
+
 ## Acknowledgements
 
 * [PHP Documentation](https://www.php.net/docs.php)
